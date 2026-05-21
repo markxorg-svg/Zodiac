@@ -14,16 +14,14 @@ export default function Footer() {
           <p className="text-rose-200/80 text-sm leading-relaxed mb-5">
             Professional astrological services by Tarot Pooja Chauhan — guiding seekers since 2004.
           </p>
-          <ul className="text-sm space-y-2 text-purple-200">
-            <li className="flex items-center gap-2">
-              <span>📞</span>
-              <a href="https://wa.me/919834946893" className="hover:text-white transition-colors">+91 98349 46893</a>
-            </li>
-            <li className="flex items-center gap-2">
-              <span>✉️</span>
-              <a href="mailto:pooja.s.chauhaan@gmail.com" className="hover:text-white transition-colors">pooja.s.chauhaan@gmail.com</a>
-            </li>
-          </ul>
+          <div className="space-y-3 text-sm">
+            <a href="tel:+919834946893" className="block text-white font-medium tracking-wide hover:text-rose-200 transition-colors">
+              +91 98349 46893
+            </a>
+            <a href="mailto:pooja.s.chauhaan@gmail.com" className="block text-white font-medium tracking-wide hover:text-rose-200 transition-colors break-all">
+              pooja.s.chauhaan@gmail.com
+            </a>
+          </div>
         </div>
 
         <div>
