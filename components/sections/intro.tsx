@@ -1,11 +1,11 @@
 import Image from "next/image";
 
 const clairs = [
-  { name: "Clairvoyance",    desc: "Clear seeing",   icon: "👁" },
-  { name: "Clairaudience",   desc: "Clear hearing",  icon: "👂" },
-  { name: "Clairsentience",  desc: "Clear feeling",  icon: "🤲" },
-  { name: "Claircognizance", desc: "Clear knowing",  icon: "🧠" },
-  { name: "Clairalience",    desc: "Clear smelling", icon: "🌸" },
+  { name: "Clairvoyance",    desc: "Clear seeing"   },
+  { name: "Clairaudience",   desc: "Clear hearing"  },
+  { name: "Clairsentience",  desc: "Clear feeling"  },
+  { name: "Claircognizance", desc: "Clear knowing"  },
+  { name: "Clairalience",    desc: "Clear smelling" },
 ];
 
 export default function Intro() {
@@ -61,9 +61,8 @@ export default function Intro() {
             <h3 className="font-cinzel text-purple-900 text-2xl font-bold">Blessed with The 5 Main Clairs</h3>
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-            {clairs.map(({ name, desc, icon }) => (
+            {clairs.map(({ name, desc }) => (
               <div key={name} className="flex flex-col items-center gap-2 p-4 rounded-2xl bg-gradient-to-b from-purple-50 to-rose-50 border border-purple-100 hover:border-purple-300 hover:shadow-sm transition-all text-center">
-                <span className="text-3xl">{icon}</span>
                 <p className="font-cinzel text-purple-800 text-xs font-semibold">{name}</p>
                 <p className="text-purple-500 text-xs">{desc}</p>
               </div>
