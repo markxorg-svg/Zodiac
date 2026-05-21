@@ -37,18 +37,24 @@ export default function Intro() {
             <p className="text-purple-500 text-sm tracking-widest uppercase mb-6">Professional Astrologer & Tarot Reader</p>
             <blockquote className="border-l-2 border-purple-300 pl-6 space-y-4 text-purple-800/80 leading-relaxed">
               <p>
-                I had strange experiences when I was a kid, but I couldn&apos;t understand what was happening.
-                Then I discovered that I have natural psychic abilities, and it all started making sense to me.
-                I have a deep connection with the universe.
+                From a very young age, I felt things others could not explain — whispers from beyond, feelings
+                that arrived before the moment, visions that quietly unfolded into truth. For a long time I
+                searched for answers, until I understood that I was not lost — I was simply awakening.
               </p>
               <p>
-                My abilities allow me to receive information and feelings from my angels, souls, archangels,
-                and ascended masters. I can predict with accuracy — I can see, hear, feel, sense, and have
-                intuitions beyond the boundaries of the physical world.
+                Over two decades ago, I embraced my gift and devoted my life to helping others find clarity in
+                moments of confusion, courage in moments of fear, and hope in moments of heartbreak. Through
+                tarot, astrology, and deep intuitive guidance, I have sat with thousands of souls — and every
+                reading has reminded me why I was born to do this work.
+              </p>
+              <p>
+                I connect with angels, archangels, ascended masters, and the energy of the universe to bring
+                you messages that are honest, compassionate, and deeply personal. I do not tell you what you
+                want to hear — I tell you what your soul needs to know.
               </p>
               <p className="italic text-purple-600 font-medium">
-                &ldquo;I believe predictions can show you the way and give you directions. But remember —
-                a prediction isn&apos;t an absolute outcome that is set in stone.&rdquo;
+                &ldquo;A reading with me is not just about the future — it is about understanding yourself
+                so deeply that the future begins to shift. You are more powerful than you know.&rdquo;
               </p>
             </blockquote>
           </div>
