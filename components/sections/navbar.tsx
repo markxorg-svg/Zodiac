@@ -27,7 +27,7 @@ export default function Navbar() {
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
           <Link href="/" className="font-cinzel text-2xl font-bold tracking-[0.2em] text-purple-900 hover:text-purple-600 transition-colors">
-            ZODIAC
+            TAROT
           </Link>
 
           <ul className="hidden md:flex gap-8 text-sm tracking-wider text-purple-700">
