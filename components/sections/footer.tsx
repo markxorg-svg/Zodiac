@@ -14,9 +14,9 @@ export default function Footer() {
           <p className="text-rose-200/80 text-sm leading-relaxed mb-5">
             Professional astrological services by Tarot Pooja Chauhan — guiding seekers since 2004.
           </p>
-          <div className="space-y-3 text-sm">
-            <a href="tel:+919834946893" className="block text-white font-raleway text-base font-semibold tracking-normal whitespace-nowrap hover:text-rose-200 transition-colors">
-              +91&nbsp;98349&nbsp;46893
+          <div className="space-y-3">
+            <a href="tel:+919834946893" style={{ whiteSpace: "nowrap" }} className="block text-white font-raleway text-base font-semibold hover:text-rose-200 transition-colors">
+              +91 98349 46893
             </a>
             <a href="mailto:pooja.s.chauhaan@gmail.com" className="block text-white font-medium tracking-wide hover:text-rose-200 transition-colors break-all">
               pooja.s.chauhaan@gmail.com
