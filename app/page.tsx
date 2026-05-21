@@ -3,7 +3,6 @@ import Hero from "@/components/sections/hero";
 import Intro from "@/components/sections/intro";
 import FeaturesCards from "@/components/ui/feature-shader-cards";
 import Stats from "@/components/sections/stats";
-import Zodiac from "@/components/sections/zodiac";
 import PulseCTA from "@/components/sections/pulse-cta";
 import { TestimonialsSection } from "@/components/ui/testimonials-section";
 import WhyUs from "@/components/sections/why-us";
@@ -28,10 +27,7 @@ export default function Home() {
       {/* 5. Statistics */}
       <Stats />
 
-      {/* 6. Zodiac Signs */}
-      <Zodiac />
-
-      {/* 7. PulseBeams CTA */}
+      {/* 6. PulseBeams CTA */}
       <PulseCTA />
 
       {/* 8. Testimonials */}
