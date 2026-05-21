@@ -15,11 +15,11 @@ export default function Intro() {
           <span className="flex-1 h-px bg-gradient-to-l from-transparent to-purple-300" />
         </div>
 
-        <div className="flex flex-col md:flex-row items-center gap-14 mb-20">
+        <div className="flex flex-col md:flex-row items-stretch gap-14 mb-20">
           {/* Photo */}
-          <div className="flex-shrink-0 relative">
+          <div className="flex-shrink-0 relative self-stretch">
             <div className="absolute -inset-2 rounded-3xl bg-gradient-to-br from-purple-300 to-rose-300 opacity-40 blur-xl" />
-            <div className="relative w-64 h-80 rounded-3xl overflow-hidden shadow-xl ring-2 ring-purple-200">
+            <div className="relative w-72 md:w-80 h-[420px] md:h-full min-h-[500px] rounded-3xl overflow-hidden shadow-xl ring-2 ring-purple-200">
               <Image src="/pooja.jpg" alt="Tarot Pooja Chauhan" fill className="object-cover object-top" priority />
             </div>
           </div>
