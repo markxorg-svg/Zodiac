@@ -56,7 +56,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.35 }}
           className="text-rose-100/90 text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed"
         >
-          Individual online readings for love, career, mediumship &amp; tarot —
+          Individual online readings for love, career, numerology &amp; tarot —
           personalised guidance you can truly trust.
         </motion.p>
 
