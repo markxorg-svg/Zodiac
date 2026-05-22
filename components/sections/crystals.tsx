@@ -36,46 +36,58 @@ export default function Crystals() {
         </motion.div>
 
         {/* Image Layout */}
-        <div className="mt-14 flex flex-col md:flex-row gap-4 items-stretch">
+        <div className="mt-14 flex flex-col md:flex-row gap-5 items-stretch">
 
-          {/* Left: portrait photo */}
+          {/* Left: crystal photo - portrait */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative w-full md:w-2/5 rounded-3xl overflow-hidden shadow-xl group min-h-[340px]"
+            transition={{ duration: 0.9, delay: 0.15, ease: "easeOut" }}
+            className="relative w-full md:w-[45%] rounded-3xl overflow-hidden shadow-2xl group min-h-[420px]"
           >
             <Image
-              src="/crystal-new3.jpg"
-              alt="Crystal collection"
+              src="/crystal-s4.jpg"
+              alt="Crystal and stone collection"
               fill
-              className="object-cover group-hover:scale-105 transition-transform duration-1000 ease-in-out"
+              className="object-cover object-center group-hover:scale-[1.06] transition-transform duration-[1200ms] ease-in-out"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-950/40 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-0 right-0 text-center">
-              <span className="font-cinzel text-white text-xs tracking-[0.3em] uppercase opacity-80">✦ Healing Stones ✦</span>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-purple-950/50 via-purple-950/10 to-transparent" />
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.7 }}
+              className="absolute bottom-6 left-0 right-0 text-center"
+            >
+              <span className="font-cinzel text-white text-xs tracking-[0.35em] uppercase drop-shadow-lg">✦ &nbsp; Sacred Collection &nbsp; ✦</span>
+            </motion.div>
           </motion.div>
 
-          {/* Right: infographic + label */}
+          {/* Right: crystal guide - light bg */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="relative w-full md:w-3/5 rounded-3xl overflow-hidden shadow-xl group min-h-[340px]"
+            transition={{ duration: 0.9, delay: 0.35, ease: "easeOut" }}
+            className="relative w-full md:w-[55%] rounded-3xl overflow-hidden shadow-2xl group min-h-[420px] bg-white"
           >
             <Image
-              src="/crystal-22.jpeg"
-              alt="Crystal types and their powers"
+              src="/crystal-44.png"
+              alt="Crystal guide with healing properties"
               fill
-              className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-in-out"
+              className="object-contain object-center group-hover:scale-[1.04] transition-transform duration-[1200ms] ease-in-out p-4"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-950/30 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-0 right-0 text-center">
-              <span className="font-cinzel text-white text-xs tracking-[0.3em] uppercase opacity-80">✦ Each Crystal, A Purpose ✦</span>
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-purple-100/60 via-transparent to-transparent" />
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.85 }}
+              className="absolute bottom-6 left-0 right-0 text-center"
+            >
+              <span className="font-cinzel text-purple-700 text-xs tracking-[0.35em] uppercase drop-shadow-sm">✦ &nbsp; Each Crystal, A Purpose &nbsp; ✦</span>
+            </motion.div>
           </motion.div>
 
         </div>
