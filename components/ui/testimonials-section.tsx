@@ -111,7 +111,7 @@ export function TestimonialsSection() {
 
         {/* Cards grid */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {testimonials.map(({ id, date, quote, badge }, index) => (
+          {testimonials.map(({ id, quote, badge }, index) => (
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -130,8 +130,7 @@ export function TestimonialsSection() {
                 <div>
                   <p className="text-gray-800 text-sm font-mono tracking-tight">{id}</p>
                   <div className="flex items-center gap-2 mt-0.5">
-                    <span className="text-gray-400 text-[11px]">{date}</span>
-                    <span className={`text-[10px] font-semibold ${badgeColor[badge]}`}>· {badge}</span>
+                    <span className={`text-[10px] font-semibold ${badgeColor[badge]}`}>{badge}</span>
                   </div>
                 </div>
               </div>
