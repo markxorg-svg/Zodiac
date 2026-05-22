@@ -136,15 +136,10 @@ export default function FeaturesCards() {
                   />
                 </div>
                 <div className="relative z-10 p-8 rounded-3xl h-full flex flex-col bg-black/80 border border-white/20 dark:border-white/10">
-                  <div className="mb-5 flex justify-center text-white filter drop-shadow-lg">{feature.icon}</div>
-                  <h3 className="text-xl font-bold mb-3 text-white text-center">{feature.title}</h3>
-                  <p className="leading-relaxed flex-grow text-gray-100 text-sm font-medium">{feature.description}</p>
-                  <div className="mt-6 flex items-center text-sm font-bold text-gray-200">
-                    <span className="mr-2">Book now</span>
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                  <div className="flex-1 flex flex-col items-center justify-center text-white filter drop-shadow-lg">
+                    {feature.icon}
                   </div>
+                  <h3 className="text-xl font-bold text-white text-center">{feature.title}</h3>
                 </div>
               </div>
             );
