@@ -1,9 +1,31 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+
+const crystals = [
+  { name: "Amazonite",      emoji: "🩵", properties: ["Throat Chakra Stone", "Calming", "Truthfulness"] },
+  { name: "Amethyst",       emoji: "💜", properties: ["Enhances meditation", "Purifying", "Immune Boosting"] },
+  { name: "Aura Quartz",    emoji: "🌈", properties: ["Inspires joy", "Heals mentally & physically", "Connection to angel guides"] },
+  { name: "Black Moonstone",emoji: "🖤", properties: ["Stimulates inner visions", "Repels negative energy", "Self reflection"] },
+  { name: "Black Onyx",     emoji: "⚫", properties: ["Strength & stamina", "Stress Relief", "Grounding"] },
+  { name: "Blue Jade",      emoji: "💙", properties: ["Calming & comforting", "Peaceful mind", "Restores emotional balance"] },
+  { name: "Clear Quartz",   emoji: "🤍", properties: ["Master healing crystal", "Clarity", "Enhances properties of other stones"] },
+  { name: "Citrine",        emoji: "💛", properties: ["Abundance & wealth", "Self-esteem & joy", "Increases creativity"] },
+  { name: "Fancy Jasper",   emoji: "💚", properties: ["Heals trauma", "Determination", "Imagination"] },
+];
 
 export default function Crystals() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % crystals.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section className="py-24 px-4 bg-gradient-to-b from-[#FDE8E8] via-[#F5EEF8] to-[#FFF8F5] overflow-hidden">
       <div className="max-w-6xl mx-auto">
@@ -64,22 +86,51 @@ export default function Crystals() {
             </motion.div>
           </motion.div>
 
-          {/* Right: crystal guide - light bg */}
+          {/* Right: crystal slideshow */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.35, ease: "easeOut" }}
-            className="relative w-full md:w-[55%] rounded-3xl overflow-hidden shadow-2xl group min-h-[600px]"
+            className="relative w-full md:w-[55%] rounded-3xl overflow-hidden shadow-2xl min-h-[600px] flex flex-col items-center justify-center"
+            style={{ backgroundColor: "#8A2BE2" }}
           >
-            <div className="absolute inset-0" style={{ backgroundColor: "#8A2BE2" }} />
-            <Image
-              src="/crystal-44.png"
-              alt="Crystal guide with healing properties"
-              fill
-              className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-[1200ms] ease-in-out"
-              style={{ mixBlendMode: "screen", filter: "invert(1) hue-rotate(180deg)" }}
-            />
+            {/* Decorative glow */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-72 h-72 bg-white/10 rounded-full blur-3xl pointer-events-none" />
+
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={current}
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -30 }}
+                transition={{ duration: 0.5 }}
+                className="flex flex-col items-center text-center px-10 gap-6"
+              >
+                <span className="text-7xl">{crystals[current].emoji}</span>
+                <h3 className="font-cinzel text-3xl md:text-4xl font-bold text-white tracking-widest uppercase">
+                  {crystals[current].name}
+                </h3>
+                <ul className="space-y-2">
+                  {crystals[current].properties.map((p) => (
+                    <li key={p} className="text-white/90 text-lg flex items-center gap-2 justify-center">
+                      <span className="text-white/50">✦</span> {p}
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            </AnimatePresence>
+
+            {/* Dots */}
+            <div className="absolute bottom-6 flex gap-2">
+              {crystals.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${i === current ? "bg-white w-5" : "bg-white/40"}`}
+                />
+              ))}
+            </div>
           </motion.div>
 
         </div>
