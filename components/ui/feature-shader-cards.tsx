@@ -31,7 +31,7 @@ const features: Feature[] = [
   {
     title: "Crystals",
     description:
-      "Harness the healing power of crystals to cleanse your energy, attract abundance, and restore balance. Each crystal carries a unique vibration that can shift what is stuck and amplify what you are calling in.",
+      "Harness the healing power of crystals to cleanse your energy, attract abundance, and restore inner balance — each stone a unique vibration aligned to your needs.",
     icon: (
       <svg className="w-20 h-20" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
         {/* Gem top facets */}
