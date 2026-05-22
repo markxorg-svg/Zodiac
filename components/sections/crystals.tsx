@@ -5,15 +5,15 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const crystals = [
-  { name: "Amazonite",       bgPos: "0% 5%",   properties: ["Throat Chakra Stone", "Calming", "Truthfulness"] },
-  { name: "Amethyst",        bgPos: "50% 5%",  properties: ["Enhances meditation", "Purifying", "Immune Boosting"] },
-  { name: "Aura Quartz",     bgPos: "100% 5%", properties: ["Inspires joy", "Heals mentally & physically", "Connection to angel guides"] },
-  { name: "Black Moonstone", bgPos: "0% 38%",  properties: ["Stimulates inner visions", "Repels negative energy", "Self reflection"] },
-  { name: "Black Onyx",      bgPos: "50% 38%", properties: ["Strength & stamina", "Stress Relief", "Grounding"] },
-  { name: "Blue Jade",       bgPos: "100% 38%",properties: ["Calming & comforting", "Peaceful mind", "Restores emotional balance"] },
-  { name: "Clear Quartz",    bgPos: "0% 72%",  properties: ["Master healing crystal", "Clarity", "Enhances properties of other stones"] },
-  { name: "Citrine",         bgPos: "50% 72%", properties: ["Abundance & wealth", "Self-esteem & joy", "Increases creativity"] },
-  { name: "Fancy Jasper",    bgPos: "100% 72%",properties: ["Heals trauma", "Determination", "Imagination"] },
+  { name: "Amazonite",       bgPos: "0% 0%",   properties: ["Throat Chakra Stone", "Calming", "Truthfulness"] },
+  { name: "Amethyst",        bgPos: "50% 0%",  properties: ["Enhances meditation", "Purifying", "Immune Boosting"] },
+  { name: "Aura Quartz",     bgPos: "100% 0%", properties: ["Inspires joy", "Heals mentally & physically", "Connection to angel guides"] },
+  { name: "Black Moonstone", bgPos: "0% 37%",  properties: ["Stimulates inner visions", "Repels negative energy", "Self reflection"] },
+  { name: "Black Onyx",      bgPos: "50% 37%", properties: ["Strength & stamina", "Stress Relief", "Grounding"] },
+  { name: "Blue Jade",       bgPos: "100% 37%",properties: ["Calming & comforting", "Peaceful mind", "Restores emotional balance"] },
+  { name: "Clear Quartz",    bgPos: "0% 79%",  properties: ["Master healing crystal", "Clarity", "Enhances properties of other stones"] },
+  { name: "Citrine",         bgPos: "50% 79%", properties: ["Abundance & wealth", "Self-esteem & joy", "Increases creativity"] },
+  { name: "Fancy Jasper",    bgPos: "100% 79%",properties: ["Heals trauma", "Determination", "Imagination"] },
 ];
 
 export default function Crystals() {
@@ -108,11 +108,12 @@ export default function Crystals() {
                 className="flex flex-col items-center text-center px-10 gap-6"
               >
                 <div
-                  className="w-40 h-40 rounded-2xl shadow-xl"
+                  className="w-52 h-52 rounded-2xl"
                   style={{
                     backgroundImage: "url('/crystal-44.png')",
-                    backgroundSize: "300% 300%",
+                    backgroundSize: "300% 500%",
                     backgroundPosition: crystals[current].bgPos,
+                    mixBlendMode: "multiply",
                   }}
                 />
                 <h3 className="font-cinzel text-3xl md:text-4xl font-bold text-white tracking-widest uppercase">
