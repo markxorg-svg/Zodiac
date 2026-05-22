@@ -27,7 +27,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.15 }}
           className="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-4"
         >
-          Tarot
+          Tarot Pooja Chauhan
         </motion.h1>
 
         <motion.h1
