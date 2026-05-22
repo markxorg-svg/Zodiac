@@ -10,9 +10,7 @@ export default function Footer() {
 
       <div className="relative max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <div className="mb-3">
-            <img src="/logo.jpeg" alt="Pooja Chauhaan Tarot" className="w-24 h-24 rounded-2xl object-cover shadow-md" />
-          </div>
+          <div className="font-cinzel text-2xl font-bold text-white mb-3 tracking-[0.2em]">TAROT</div>
           <p className="text-rose-200/80 text-sm leading-relaxed mb-5">
             Professional astrological services by Tarot Pooja Chauhan — guiding seekers since 2004.
           </p>
