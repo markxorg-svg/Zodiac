@@ -14,8 +14,14 @@ export default function Crystals() {
 
         <div className="text-center mb-4">
           <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-purple-900 mb-4">Crystals</h2>
-          <p className="text-purple-600/80 text-lg max-w-2xl mx-auto leading-relaxed">
-            Every crystal holds an ancient frequency — chosen for you, attuned to your energy, and placed with intention to heal, protect, and manifest.
+          <p className="text-purple-600/80 text-lg max-w-2xl mx-auto leading-relaxed mb-3">
+            Every crystal holds an ancient frequency — chosen for you, attuned to your energy, and placed with intention to heal, protect, and manifest. ✨
+          </p>
+          <p className="text-purple-700 text-lg max-w-2xl mx-auto leading-relaxed mb-3">
+            Order your crystal today and invite the energy your soul has been searching for. 💫
+          </p>
+          <p className="text-purple-900 font-semibold text-lg max-w-2xl mx-auto leading-relaxed italic font-cinzel">
+            Because the right crystal doesn&apos;t just find you — it changes you.
           </p>
         </div>
 
