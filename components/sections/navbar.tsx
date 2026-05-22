@@ -30,8 +30,7 @@ export default function Navbar() {
             <img
               src="/logo.jpeg"
               alt="Pooja Chauhaan Tarot"
-              className="h-12 w-12 rounded-xl object-cover"
-              style={{ mixBlendMode: "multiply" }}
+              className="h-14 w-14 rounded-2xl object-contain shadow-md ring-1 ring-purple-200 hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
