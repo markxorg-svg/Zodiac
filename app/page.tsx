@@ -6,6 +6,7 @@ import Crystals from "@/components/sections/crystals";
 import Stats from "@/components/sections/stats";
 import PulseCTA from "@/components/sections/pulse-cta";
 import { TestimonialsSection } from "@/components/ui/testimonials-section";
+import LeaveReview from "@/components/sections/leave-review";
 import WhyUs from "@/components/sections/why-us";
 import Footer from "@/components/sections/footer";
 import WhatsAppButton from "@/components/ui/whatsapp-button";
@@ -37,7 +38,10 @@ export default function Home() {
       {/* 8. Testimonials */}
       <TestimonialsSection />
 
-      {/* 9. Why Work With Us */}
+      {/* 9. Leave a Review */}
+      <LeaveReview />
+
+      {/* 10. Why Work With Us */}
       <WhyUs />
 
       {/* 10. Footer */}
