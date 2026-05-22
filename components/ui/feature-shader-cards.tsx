@@ -15,7 +15,7 @@ const features: Feature[] = [
     description:
       "Discover what the stars and cards reveal about your love life — compatibility, timing, soulmates, and the blocks keeping you from the relationship you deserve.",
     icon: (
-      <svg className="w-20 h-20" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
+      <svg className="w-24 h-24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
         {/* Circle at top */}
         <circle cx="50" cy="16" r="8"/>
         {/* Arms curving down */}
@@ -33,7 +33,7 @@ const features: Feature[] = [
     description:
       "Harness the healing power of crystals to cleanse your energy, attract abundance, and restore inner balance — each stone a unique vibration aligned to your needs.",
     icon: (
-      <svg className="w-20 h-20" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
+      <svg className="w-24 h-24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
         {/* Gem top facets */}
         <path d="M50 12 L30 32 L50 88 L70 32 Z"/>
         {/* Belt line */}
@@ -53,7 +53,7 @@ const features: Feature[] = [
     description:
       "Understand the cosmic energies influencing your career and finances. Get guidance on timing, opportunities, blockages, and the steps to unlock prosperity.",
     icon: (
-      <svg className="w-20 h-20" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
+      <svg className="w-24 h-24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
         {/* Eye outline */}
         <path d="M10 50 C10 50 25 20 50 20 C75 20 90 50 90 50 C90 50 75 80 50 80 C25 80 10 50 10 50 Z"/>
         {/* Crescent moon inside eye */}
@@ -66,7 +66,7 @@ const features: Feature[] = [
     description:
       "In-depth tarot spreads that illuminate the path ahead, paired with intention-setting spells to remove energetic blocks and draw in what you truly want.",
     icon: (
-      <svg className="w-20 h-20" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
+      <svg className="w-24 h-24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
         {/* Outer circle */}
         <circle cx="50" cy="50" r="38"/>
         {/* 5-pointed star */}
@@ -118,7 +118,7 @@ export default function FeaturesCards() {
           {features.map((feature, index) => {
             const cfg = getShaderConfig(index);
             return (
-              <div key={index} className="relative h-80">
+              <div key={index} className="relative h-96">
                 <div className="absolute inset-0 rounded-3xl overflow-hidden">
                   <Warp
                     style={{ height: "100%", width: "100%" }}
@@ -136,8 +136,8 @@ export default function FeaturesCards() {
                   />
                 </div>
                 <div className="relative z-10 p-8 rounded-3xl h-full flex flex-col bg-black/80 border border-white/20 dark:border-white/10">
-                  <div className="mb-6 filter drop-shadow-lg">{feature.icon}</div>
-                  <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
+                  <div className="mb-5 flex justify-center text-white filter drop-shadow-lg">{feature.icon}</div>
+                  <h3 className="text-xl font-bold mb-3 text-white text-center">{feature.title}</h3>
                   <p className="leading-relaxed flex-grow text-gray-100 text-sm font-medium">{feature.description}</p>
                   <div className="mt-6 flex items-center text-sm font-bold text-gray-200">
                     <span className="mr-2">Book now</span>
