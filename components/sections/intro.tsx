@@ -41,11 +41,11 @@ export default function Intro() {
               </p>
               <div className="space-y-1.5">
                 <p className="font-semibold text-purple-800 mb-2">I have been blessed with the 5 sacred Clairs:</p>
-                <p>✨ Clairvoyance — Clear Seeing</p>
-                <p>✨ Clairaudience — Clear Hearing</p>
-                <p>✨ Clairsentience — Clear Feeling</p>
-                <p>✨ Claircognizance — Clear Knowing</p>
-                <p>✨ Clairalience — Clear Smelling</p>
+                <p>✨ Clairvoyance</p>
+                <p>✨ Clairaudience</p>
+                <p>✨ Clairsentience</p>
+                <p>✨ Claircognizance</p>
+                <p>✨ Clairalience</p>
               </div>
               <p className="italic text-purple-600 font-medium">
                 I believe predictions are not fixed destinies, but gentle guidance to help illuminate your path
