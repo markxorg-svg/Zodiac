@@ -19,53 +19,31 @@ export default function Crystals() {
           </p>
         </div>
 
-        {/* Image Grid */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 gap-4">
+        {/* Image Gallery */}
+        <div className="mt-12 space-y-3">
 
-          {/* Left: tall portrait */}
-          <div className="relative md:row-span-2 rounded-3xl overflow-hidden min-h-[380px] md:min-h-[560px] shadow-lg">
-            <Image
-              src="/crystal-2.jpg"
-              alt="Amethyst crystal journal"
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-950/30 to-transparent" />
+          {/* Top row: 3 images */}
+          <div className="grid grid-cols-3 gap-3">
+            <div className="relative h-52 rounded-2xl overflow-hidden shadow-md group">
+              <Image src="/crystal-2.jpg" alt="Amethyst journal" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-950/30 to-transparent" />
+            </div>
+            <div className="relative h-52 rounded-2xl overflow-hidden shadow-md group">
+              <Image src="/crystal-3.jpg" alt="Crystals on wood" fill className="object-cover object-top group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-950/20 to-transparent" />
+            </div>
+            <div className="relative h-52 rounded-2xl overflow-hidden shadow-md group">
+              <Image src="/crystal-4.jpg" alt="Crystal stone tray" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-purple-950/20 to-transparent" />
+            </div>
           </div>
 
-          {/* Top right */}
-          <div className="relative rounded-3xl overflow-hidden h-[270px] shadow-lg">
-            <Image
-              src="/crystal-3.jpg"
-              alt="Crystal collection on wood"
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-950/20 to-transparent" />
-          </div>
-
-          {/* Bottom right */}
-          <div className="relative rounded-3xl overflow-hidden h-[270px] shadow-lg">
-            <Image
-              src="/crystal-4.jpg"
-              alt="Crystal and stone tray"
-              fill
-              className="object-cover hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-950/20 to-transparent" />
-          </div>
-
-          {/* Full-width bottom */}
-          <div className="relative md:col-span-2 rounded-3xl overflow-hidden h-[300px] shadow-lg">
-            <Image
-              src="/crystal-1.jpg"
-              alt="Astrology and crystals"
-              fill
-              className="object-cover object-center hover:scale-105 transition-transform duration-700"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-purple-950/40 to-transparent" />
-            <div className="absolute bottom-6 left-0 right-0 text-center">
-              <p className="font-cinzel text-white text-sm tracking-[0.3em] uppercase opacity-80">
+          {/* Bottom: wide feature image */}
+          <div className="relative h-48 rounded-2xl overflow-hidden shadow-md group">
+            <Image src="/crystal-1.jpg" alt="Astrology wheel" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-t from-purple-950/50 to-transparent" />
+            <div className="absolute bottom-5 left-0 right-0 text-center">
+              <p className="font-cinzel text-white text-xs tracking-[0.35em] uppercase opacity-90">
                 ✦ &nbsp; Aligned with the Stars &nbsp; ✦
               </p>
             </div>
