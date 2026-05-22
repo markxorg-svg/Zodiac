@@ -46,7 +46,7 @@ export default function Hero() {
           className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-200 via-purple-200 to-pink-200">
-            Astrology, Numerology &amp; Crystals
+            Tarot Reader, Numerology &amp; Crystals
           </span>
         </motion.h1>
 
