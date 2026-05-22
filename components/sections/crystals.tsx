@@ -108,12 +108,11 @@ export default function Crystals() {
                 className="flex flex-col items-center text-center px-10 gap-6"
               >
                 <div
-                  className="w-52 h-52 rounded-2xl"
+                  className="w-56 h-56 rounded-3xl shadow-2xl ring-2 ring-white/20"
                   style={{
                     backgroundImage: "url('/crystal-44.png')",
                     backgroundSize: "300% 1200%",
                     backgroundPosition: crystals[current].bgPos,
-                    mixBlendMode: "multiply",
                   }}
                 />
                 <h3 className="font-cinzel text-3xl md:text-4xl font-bold text-white tracking-widest uppercase">
