@@ -30,14 +30,18 @@ export default function Intro() {
             <p className="text-purple-500 text-sm tracking-widest uppercase mb-6">Professional Astrologer, Tarot Reader & Numerologist</p>
             <blockquote className="border-l-2 border-purple-300 pl-6 space-y-4 text-purple-800/80 leading-relaxed">
               <p>
-                From a very young age, I experienced things I couldn&apos;t explain — deep intuitions, powerful
-                feelings, and spiritual connections beyond the physical world. Over time, I understood these were
-                natural psychic gifts guiding me toward my true purpose.
+                I am Pooja — a gifted psychic, Tarot Reader, clairvoyant, energy reader, empath, and white witch
+                with the rare ability to tap into the mysteries of the universe. From a very young age, I experienced
+                things others could not explain — deep intuitions, powerful feelings, and spiritual connections beyond
+                the physical world. Over time, I understood these were natural gifts guiding me toward my true purpose.
               </p>
               <p>
-                I share a strong connection with the universe and receive intuitive messages through angels, souls,
-                archangels, and ascended masters. My abilities help me sense, feel, hear, know, and perceive energies
-                with clarity and accuracy, offering guidance, healing, and direction to those seeking answers.
+                Through clairvoyance, precognition, and tarot, I help you sense, feel, hear, know, and perceive
+                energies with clarity and accuracy — offering guidance, healing, and direction to those seeking answers.
+              </p>
+              <p>
+                I am guided by my Ascended Masters, Archangels, Angels, and Spirit Guides — my eternal lighthouse,
+                always by my side — bringing you messages of truth, clarity, and compassion.
               </p>
               <div className="space-y-1.5">
                 <p className="font-semibold text-purple-800 mb-2">I have been blessed with the 5 sacred Clairs:</p>
