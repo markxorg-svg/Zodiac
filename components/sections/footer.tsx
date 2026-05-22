@@ -1,4 +1,4 @@
-const serviceLinks = ["Love & Relationship Reading","Mediumship Session","Work, Career & Money","Tarot Reading","Spell Work","Personal Horoscope"];
+const serviceLinks = ["Love & Relationship Reading","Work, Career & Money","Tarot Reading","Spell Work","Personal Horoscope"];
 const quickLinks   = ["Home","Services","About","Horoscopes","Testimonials","Contact"];
 
 export default function Footer() {
