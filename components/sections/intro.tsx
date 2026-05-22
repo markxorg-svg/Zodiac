@@ -31,9 +31,7 @@ export default function Intro() {
             <blockquote className="border-l-2 border-purple-300 pl-6 space-y-4 text-purple-800/80 leading-relaxed">
               <p>
                 I am Pooja — a gifted psychic, Tarot Reader, clairvoyant, energy reader, empath, and white witch
-                with the rare ability to tap into the mysteries of the universe. From a very young age, I experienced
-                things others could not explain — deep intuitions, powerful feelings, and spiritual connections beyond
-                the physical world. Over time, I understood these were natural gifts guiding me toward my true purpose.
+                with the rare ability to tap into the mysteries of the universe.
               </p>
               <p>
                 Through clairvoyance, precognition, and tarot, I help you sense, feel, hear, know, and perceive
