@@ -27,7 +27,7 @@ export default function Intro() {
           {/* Text */}
           <div className="max-w-xl">
             <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-purple-900 mb-2">Tarot Pooja Chauhan</h2>
-            <p className="text-purple-500 text-sm tracking-widest uppercase mb-6">Professional Astrologer & Tarot Reader</p>
+            <p className="text-purple-500 text-sm tracking-widest uppercase mb-6">Professional Astrologer, Tarot Reader & Numerologist</p>
             <blockquote className="border-l-2 border-purple-300 pl-6 space-y-4 text-purple-800/80 leading-relaxed">
               <p>
                 From a very young age, I experienced things I couldn&apos;t explain — deep intuitions, powerful
