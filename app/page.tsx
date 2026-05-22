@@ -2,6 +2,7 @@ import Navbar from "@/components/sections/navbar";
 import Hero from "@/components/sections/hero";
 import Intro from "@/components/sections/intro";
 import FeaturesCards from "@/components/ui/feature-shader-cards";
+import Crystals from "@/components/sections/crystals";
 import Stats from "@/components/sections/stats";
 import PulseCTA from "@/components/sections/pulse-cta";
 import { TestimonialsSection } from "@/components/ui/testimonials-section";
@@ -24,7 +25,10 @@ export default function Home() {
       {/* 4. Features / Services Cards */}
       <FeaturesCards />
 
-      {/* 5. Statistics */}
+      {/* 5. Crystals */}
+      <Crystals />
+
+      {/* 6. Statistics */}
       <Stats />
 
       {/* 6. PulseBeams CTA */}
