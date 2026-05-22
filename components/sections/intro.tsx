@@ -27,7 +27,7 @@ export default function Intro() {
           {/* Text */}
           <div className="max-w-xl">
             <h2 className="font-cinzel text-3xl md:text-4xl font-bold text-purple-900 mb-2">Tarot Pooja Chauhan</h2>
-            <p className="text-purple-500 text-sm tracking-widest uppercase mb-6">Professional Astrologer, Tarot Reader & Numerologist</p>
+            <p className="text-purple-500 text-sm tracking-widest uppercase mb-6">Tarot Reader, Numerology & Crystals</p>
             <blockquote className="border-l-2 border-purple-300 pl-6 space-y-4 text-purple-800/80 leading-relaxed">
               <p>
                 I am Pooja — a gifted psychic, Tarot Reader, clairvoyant, energy reader, empath, and white witch
