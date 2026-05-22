@@ -26,8 +26,13 @@ export default function Navbar() {
           : "bg-white/80 backdrop-blur-md"
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
-          <Link href="/" className="font-cinzel text-2xl font-bold tracking-[0.2em] text-purple-900 hover:text-purple-600 transition-colors">
-            TAROT
+          <Link href="/">
+            <img
+              src="/logo.jpeg"
+              alt="Pooja Chauhaan Tarot"
+              className="h-12 w-12 rounded-xl object-cover"
+              style={{ mixBlendMode: "multiply" }}
+            />
           </Link>
 
           <ul className="hidden md:flex gap-8 text-sm tracking-wider text-purple-700">
