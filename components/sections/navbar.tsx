@@ -25,12 +25,12 @@ export default function Navbar() {
           ? "bg-white/90 backdrop-blur-xl border-b border-purple-200/60 shadow-sm shadow-purple-100"
           : "bg-white/80 backdrop-blur-md"
       }`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-24">
           <Link href="/">
             <img
-              src="/mainlogo.png"
+              src="/mm.png"
               alt="Pooja Chauhaan Tarot"
-              className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              className="h-24 w-auto object-contain hover:scale-105 transition-transform duration-300"
               style={{ mixBlendMode: "multiply" }}
             />
           </Link>
