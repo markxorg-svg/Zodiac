@@ -34,8 +34,7 @@ export default function Intro() {
                 with the rare ability to tap into the mysteries of the universe.
               </p>
               <p>
-                Through clairvoyance, precognition, and tarot, I help you sense, feel, hear, know, and perceive
-                energies with clarity and accuracy — offering guidance, healing, and direction to those seeking answers.
+                Through clairvoyance, precognition, and tarot, I help you perceive energies with clarity and accuracy — offering guidance, healing, and direction to those seeking answers.
               </p>
               <p>
                 I am guided by my Ascended Masters, Archangels, Angels, and Spirit Guides — my eternal lighthouse,
