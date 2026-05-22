@@ -21,22 +21,13 @@ export default function Hero() {
       <div className="absolute bottom-24 right-8 text-purple-300/40 text-4xl select-none">✧</div>
 
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-24">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="font-cinzel text-rose-200 text-xs md:text-sm tracking-[0.4em] uppercase mb-6"
-        >
-          ✦ &nbsp; Tarot Pooja Chauhan &nbsp; ✦
-        </motion.p>
-
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
           className="font-cinzel text-5xl md:text-7xl lg:text-8xl font-bold text-white leading-tight mb-4"
         >
-          Best Tarot
+          Tarot
         </motion.h1>
 
         <motion.h1
