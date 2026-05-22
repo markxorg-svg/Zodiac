@@ -28,7 +28,7 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex items-center justify-between h-24">
           <Link href="/">
             <img
-              src="/mm.png"
+              src="/nn.png"
               alt="Pooja Chauhaan Tarot"
               className="h-24 w-auto object-contain hover:scale-105 transition-transform duration-300"
               style={{ mixBlendMode: "multiply" }}
