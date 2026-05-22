@@ -70,13 +70,13 @@ export default function Crystals() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.9, delay: 0.35, ease: "easeOut" }}
-            className="relative w-full md:w-[55%] rounded-3xl overflow-hidden shadow-2xl group min-h-[420px] bg-white"
+            className="relative w-full md:w-[55%] rounded-3xl overflow-hidden shadow-2xl group min-h-[420px]"
           >
             <Image
               src="/crystal-44.png"
               alt="Crystal guide with healing properties"
               fill
-              className="object-contain object-center group-hover:scale-[1.04] transition-transform duration-[1200ms] ease-in-out p-4"
+              className="object-cover object-top group-hover:scale-[1.04] transition-transform duration-[1200ms] ease-in-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-purple-100/60 via-transparent to-transparent" />
             <motion.div
