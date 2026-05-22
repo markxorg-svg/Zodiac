@@ -39,13 +39,6 @@ const testimonials: Testimonial[] = [
       "Aap bahut sahajta se aur shanti se baat ko sunkar Taro dwara uska sahi samadhan aur stithi batati hain — you are excellent.",
   },
   {
-    id: "9194255*****",
-    date: "26 Nov 2025",
-    badge: "Client Rating",
-    quote:
-      "Aap se baat karne par ek energy milti hai. Aap taro dwara proper jankari deti hain jis se mujhe apne decision lene me confidence milta hai. Thank you so much.",
-  },
-  {
     id: "9199960*****",
     date: "10 Apr 2025",
     badge: "Verified Purchase",
