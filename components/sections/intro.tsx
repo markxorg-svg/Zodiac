@@ -30,15 +30,16 @@ export default function Intro() {
             <p className="text-purple-500 text-sm tracking-widest uppercase mb-6">Tarot Reader, Numerology & Crystals</p>
             <blockquote className="border-l-2 border-purple-300 pl-6 space-y-4 text-purple-800/80 leading-relaxed">
               <p>
-                I am Pooja — a gifted psychic, Tarot Reader, clairvoyant, energy reader, empath, and white witch
-                with the rare ability to tap into the mysteries of the universe.
+                I am Pooja, a gifted Psychic, Tarot Reader, Clairvoyant, Energy Reader, Empath, and White Witch with a deep connection to the universe and spiritual energies. Through my psychic abilities, clairvoyance, precognition, intuition, and tarot guidance, I help people gain clarity, healing, direction, and deeper insight into their life journey.
               </p>
               <p>
-                Through clairvoyance, precognition, and tarot, I help you perceive energies with clarity and accuracy — offering guidance, healing, and direction to those seeking answers.
+                I had many strange and unexplainable experiences during my childhood, but at that time I couldn&apos;t fully understand what was happening to me. As I grew older, I discovered that I have natural psychic and intuitive abilities, and suddenly everything started making sense.
               </p>
               <p>
-                I am guided by my Ascended Masters, Archangels, Angels, and Spirit Guides — my eternal lighthouse,
-                always by my side — bringing you messages of truth, clarity, and compassion.
+                I feel deeply connected to the universe and guided by divine spiritual energies. Through my abilities, I receive messages, emotions, signs, and intuitive insights from angels, souls, archangels, and ascended masters. This connection helps me understand energies beyond the physical world and guide people toward clarity and direction.
+              </p>
+              <p>
+                I have strong intuition and the ability to predict situations with accuracy through spiritual guidance and inner knowing. I believe predictions are not fixed outcomes set in stone — they are messages that help reveal possible paths, opportunities, and guidance for the future.
               </p>
               <div className="space-y-1.5">
                 <p className="font-semibold text-purple-800 mb-2">I have been blessed with the 5 sacred Clairs:</p>
@@ -48,10 +49,6 @@ export default function Intro() {
                 <p>✨ Claircognizance</p>
                 <p>✨ Clairalience</p>
               </div>
-              <p className="italic text-purple-600 font-medium">
-                I believe predictions are not fixed destinies, but gentle guidance to help illuminate your path
-                and empower your journey.
-              </p>
             </blockquote>
           </div>
         </div>
