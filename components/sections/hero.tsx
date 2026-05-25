@@ -1,24 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const slides = [
-  { src: "/a.jpg", alt: "Tarot reading atmosphere" },
-  { src: "/b.jpg", alt: "Spiritual guidance" },
-  { src: "/c.jpg", alt: "Crystal energy" },
-  { src: "/d.jpg", alt: "Mystical journey" },
-];
-
-/* Each slide has its own slow Ken Burns direction while active */
-const kenBurns = [
-  { initial: { scale: 1.08, x: "1%",  y: "0%"  }, animate: { scale: 1.18, x: "-1%", y: "-1%" } },
-  { initial: { scale: 1.1,  x: "-2%", y: "0%"  }, animate: { scale: 1.05, x: "2%",  y: "1%"  } },
-  { initial: { scale: 1.05, x: "0%",  y: "2%"  }, animate: { scale: 1.14, x: "-1%", y: "-2%" } },
-  { initial: { scale: 1.12, x: "1%",  y: "-1%" }, animate: { scale: 1.07, x: "-2%", y: "1%"  } },
-];
+const slides = ["/a.jpg", "/b.jpg", "/c.jpg", "/d.jpg"];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
@@ -33,72 +19,57 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
 
-      {/* ── Slideshow with Ken Burns ── */}
-      <AnimatePresence>
-        {slides.map((slide, i) =>
-          i === current ? (
-            <motion.div
-              key={slide.src}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 1.8, ease: "easeInOut" }}
-              className="absolute inset-0 z-0"
-            >
-              <motion.div
-                className="absolute inset-0"
-                initial={kenBurns[i].initial}
-                animate={kenBurns[i].animate}
-                transition={{ duration: 7, ease: "easeInOut" }}
-              >
-                <Image
-                  src={slide.src}
-                  alt={slide.alt}
-                  fill
-                  priority={i === 0}
-                  className="object-cover object-center"
-                  sizes="100vw"
-                />
-              </motion.div>
-            </motion.div>
-          ) : null
-        )}
-      </AnimatePresence>
+      {/* Ken Burns keyframes */}
+      <style>{`
+        @keyframes kb1 { from { transform: scale(1.08) translate(1%,  0%); } to { transform: scale(1.18) translate(-1%, -1%); } }
+        @keyframes kb2 { from { transform: scale(1.10) translate(-2%, 0%); } to { transform: scale(1.05) translate(2%,   1%); } }
+        @keyframes kb3 { from { transform: scale(1.05) translate(0%,  2%); } to { transform: scale(1.14) translate(-1%, -2%); } }
+        @keyframes kb4 { from { transform: scale(1.12) translate(1%, -1%); } to { transform: scale(1.07) translate(-2%,  1%); } }
+      `}</style>
 
-      {/* ── Layered overlays ── */}
+      {/* All 4 slides — CSS opacity fade between them */}
+      {slides.map((src, i) => (
+        <div
+          key={src}
+          className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
+          style={{ opacity: i === current ? 1 : 0 }}
+        >
+          <div
+            className="absolute inset-0 bg-cover bg-center"
+            style={{
+              backgroundImage: `url('${src}')`,
+              animation: `kb${i + 1} 8s ease-in-out infinite alternate`,
+            }}
+          />
+        </div>
+      ))}
+
+      {/* Layered overlays */}
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/55 via-purple-950/15 to-black/80" />
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-purple-950/35 via-transparent to-black/25" />
 
-      {/* ── Shimmer line ── */}
+      {/* Shimmer line */}
       <motion.div
         className="absolute z-20 top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"
         animate={{ scaleX: [0, 1, 0], opacity: [0, 0.8, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", repeatDelay: 2 }}
       />
 
-      {/* ── Decorative stars ── */}
-      <motion.div
-        className="absolute z-20 top-32 left-8 text-rose-300/50 text-5xl select-none"
+      {/* Decorative stars */}
+      <motion.div className="absolute z-20 top-32 left-8 text-rose-300/50 text-5xl select-none"
         animate={{ opacity: [0.3, 0.8, 0.3], rotate: [0, 15, 0] }}
-        transition={{ duration: 4, repeat: Infinity }}
-      >✦</motion.div>
-      <motion.div
-        className="absolute z-20 top-40 right-12 text-purple-300/40 text-3xl select-none"
+        transition={{ duration: 4, repeat: Infinity }}>✦</motion.div>
+      <motion.div className="absolute z-20 top-40 right-12 text-purple-300/40 text-3xl select-none"
         animate={{ opacity: [0.2, 0.7, 0.2], rotate: [0, -10, 0] }}
-        transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-      >✧</motion.div>
-      <motion.div
-        className="absolute z-20 bottom-44 left-16 text-rose-300/30 text-2xl select-none"
+        transition={{ duration: 5, repeat: Infinity, delay: 1 }}>✧</motion.div>
+      <motion.div className="absolute z-20 bottom-44 left-16 text-rose-300/30 text-2xl select-none"
         animate={{ opacity: [0.2, 0.6, 0.2] }}
-        transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}
-      >✦</motion.div>
-      <motion.div
-        className="absolute z-20 bottom-36 right-8 text-purple-300/40 text-4xl select-none"
+        transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}>✦</motion.div>
+      <motion.div className="absolute z-20 bottom-36 right-8 text-purple-300/40 text-4xl select-none"
         animate={{ opacity: [0.3, 0.8, 0.3], rotate: [0, 10, 0] }}
-        transition={{ duration: 4.5, repeat: Infinity, delay: 2 }}
-      >✧</motion.div>
+        transition={{ duration: 4.5, repeat: Infinity, delay: 2 }}>✧</motion.div>
 
-      {/* ── Main content ── */}
+      {/* Main content */}
       <div className="relative z-30 max-w-4xl mx-auto px-4 text-center pt-28">
 
         {/* Est. badge */}
@@ -159,9 +130,7 @@ export default function Hero() {
             className="relative overflow-hidden px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-rose-500 text-white font-semibold text-lg transition-all shadow-2xl shadow-purple-700/50 hover:scale-105 hover:shadow-rose-500/40 group"
           >
             <span className="relative z-10">✦ Book an Appointment Now</span>
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-rose-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-            />
+            <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
           </a>
           <Link
             href="#services"
@@ -192,10 +161,10 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* ── Bottom fade into next section ── */}
+      {/* Bottom fade into next section */}
       <div className="absolute bottom-0 left-0 right-0 h-40 z-20 bg-gradient-to-t from-[#FFF8F5] to-transparent" />
 
-      {/* ── Scroll indicator ── */}
+      {/* Scroll indicator */}
       <motion.div
         className="absolute bottom-10 left-1/2 z-30 -translate-x-1/2 flex flex-col items-center gap-2 text-white/50 text-xs tracking-[0.3em] uppercase"
         animate={{ y: [0, 6, 0] }}
