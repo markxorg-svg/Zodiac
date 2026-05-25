@@ -10,10 +10,6 @@ const slides = [
   { src: "/h3.jpg" },
   { src: "/h4.jpg" },
   { src: "/h5.jpg" },
-  { src: "/a.jpg" },
-  { src: "/b.jpg" },
-  { src: "/c.jpg" },
-  { src: "/d.jpg" },
 ];
 
 export default function Hero() {
@@ -56,7 +52,7 @@ export default function Hero() {
           {/* Ken Burns wrapper — overflow hidden keeps zoom inside bounds */}
           <div
             className="absolute inset-0"
-            style={{ animation: `kb${(i % 9) + 1} 6s ease-in-out infinite alternate` }}
+            style={{ animation: `kb${i + 1} 6s ease-in-out infinite alternate` }}
           >
             <img
               src={src}
