@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import { CrystalSlider } from "@/components/ui/crystal-slider";
 
 const crystals = [
   { name: "Amazonite",       bgPos: "0% 2%",   properties: ["Throat Chakra Stone", "Calming", "Truthfulness"] },
@@ -141,6 +142,18 @@ export default function Crystals() {
           </motion.div>
 
         </div>
+
+        {/* Infinite crystal image scroll */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="mt-16"
+        >
+          <CrystalSlider />
+        </motion.div>
+
       </div>
     </section>
   );
