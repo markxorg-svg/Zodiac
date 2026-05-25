@@ -4,7 +4,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
-const slides = ["/a.jpg", "/b.jpg", "/c.jpg", "/d.jpg"];
+const slides = [
+  { src: "/a.jpg" },
+  { src: "/b.jpg" },
+  { src: "/c.jpg" },
+  { src: "/d.jpg" },
+];
 
 export default function Hero() {
   const [current, setCurrent] = useState(0);
@@ -12,64 +17,67 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5500);
+    }, 3000);
     return () => clearInterval(timer);
   }, []);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
 
-      {/* Ken Burns keyframes */}
+      {/* Ken Burns keyframes — each slide zooms in a different direction */}
       <style>{`
-        @keyframes kb1 { from { transform: scale(1.08) translate(1%,  0%); } to { transform: scale(1.18) translate(-1%, -1%); } }
-        @keyframes kb2 { from { transform: scale(1.10) translate(-2%, 0%); } to { transform: scale(1.05) translate(2%,   1%); } }
-        @keyframes kb3 { from { transform: scale(1.05) translate(0%,  2%); } to { transform: scale(1.14) translate(-1%, -2%); } }
-        @keyframes kb4 { from { transform: scale(1.12) translate(1%, -1%); } to { transform: scale(1.07) translate(-2%,  1%); } }
+        @keyframes kb1 { 0%{transform:scale(1.0) translate(0%,0%)}   100%{transform:scale(1.18) translate(-2%,-1%)} }
+        @keyframes kb2 { 0%{transform:scale(1.15) translate(-2%,0%)} 100%{transform:scale(1.0)  translate(2%, 1%)} }
+        @keyframes kb3 { 0%{transform:scale(1.0)  translate(2%, 1%)} 100%{transform:scale(1.18) translate(-1%,-2%)} }
+        @keyframes kb4 { 0%{transform:scale(1.15) translate(0%, 2%)} 100%{transform:scale(1.0)  translate(-2%,-1%)} }
       `}</style>
 
-      {/* All 4 slides — CSS opacity fade between them */}
-      {slides.map((src, i) => (
+      {/* All slides stacked — img tags for reliable rendering */}
+      {slides.map(({ src }, i) => (
         <div
           key={src}
-          className="absolute inset-0 transition-opacity duration-[2000ms] ease-in-out"
-          style={{ opacity: i === current ? 1 : 0 }}
+          className="absolute inset-0"
+          style={{
+            opacity: i === current ? 1 : 0,
+            transition: "opacity 0.9s ease-in-out",
+            zIndex: i === current ? 1 : 0,
+          }}
         >
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: `url('${src}')`,
-              animation: `kb${i + 1} 8s ease-in-out infinite alternate`,
-            }}
+          <img
+            src={src}
+            alt=""
+            className="w-full h-full object-cover object-center"
+            style={{ animation: `kb${i + 1} 5s ease-in-out infinite alternate` }}
           />
         </div>
       ))}
 
-      {/* Layered overlays */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/55 via-purple-950/15 to-black/80" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-purple-950/35 via-transparent to-black/25" />
+      {/* Overlays */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/25 to-black/80" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-purple-950/40 via-transparent to-black/20" />
 
-      {/* Shimmer line */}
+      {/* Shimmer */}
       <motion.div
         className="absolute z-20 top-1/3 left-0 right-0 h-px bg-gradient-to-r from-transparent via-purple-400/40 to-transparent"
         animate={{ scaleX: [0, 1, 0], opacity: [0, 0.8, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", repeatDelay: 2 }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", repeatDelay: 3 }}
       />
 
       {/* Decorative stars */}
-      <motion.div className="absolute z-20 top-32 left-8 text-rose-300/50 text-5xl select-none"
-        animate={{ opacity: [0.3, 0.8, 0.3], rotate: [0, 15, 0] }}
+      <motion.div className="absolute z-20 top-32 left-8 text-rose-300/60 text-5xl select-none"
+        animate={{ opacity: [0.4, 0.9, 0.4], rotate: [0, 15, 0] }}
         transition={{ duration: 4, repeat: Infinity }}>✦</motion.div>
-      <motion.div className="absolute z-20 top-40 right-12 text-purple-300/40 text-3xl select-none"
-        animate={{ opacity: [0.2, 0.7, 0.2], rotate: [0, -10, 0] }}
+      <motion.div className="absolute z-20 top-44 right-14 text-purple-300/50 text-3xl select-none"
+        animate={{ opacity: [0.3, 0.8, 0.3], rotate: [0, -12, 0] }}
         transition={{ duration: 5, repeat: Infinity, delay: 1 }}>✧</motion.div>
-      <motion.div className="absolute z-20 bottom-44 left-16 text-rose-300/30 text-2xl select-none"
+      <motion.div className="absolute z-20 bottom-48 left-16 text-rose-300/40 text-2xl select-none"
         animate={{ opacity: [0.2, 0.6, 0.2] }}
         transition={{ duration: 3.5, repeat: Infinity, delay: 0.5 }}>✦</motion.div>
-      <motion.div className="absolute z-20 bottom-36 right-8 text-purple-300/40 text-4xl select-none"
+      <motion.div className="absolute z-20 bottom-36 right-10 text-purple-300/50 text-4xl select-none"
         animate={{ opacity: [0.3, 0.8, 0.3], rotate: [0, 10, 0] }}
         transition={{ duration: 4.5, repeat: Infinity, delay: 2 }}>✧</motion.div>
 
-      {/* Main content */}
+      {/* Content */}
       <div className="relative z-30 max-w-4xl mx-auto px-4 text-center pt-28">
 
         {/* Est. badge */}
@@ -84,7 +92,7 @@ export default function Hero() {
           <span className="h-px w-16 bg-gradient-to-l from-transparent to-rose-300/60" />
         </motion.div>
 
-        {/* Heading */}
+        {/* Main heading */}
         <motion.h1
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -140,7 +148,7 @@ export default function Hero() {
           </Link>
         </motion.div>
 
-        {/* Slide dots */}
+        {/* Dots */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -161,7 +169,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      {/* Bottom fade into next section */}
+      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-40 z-20 bg-gradient-to-t from-[#FFF8F5] to-transparent" />
 
       {/* Scroll indicator */}
