@@ -1,18 +1,45 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
+
+const slides = [
+  { src: "/hero1.jpg", alt: "Zodiac wheel" },
+  { src: "/hero2.jpg", alt: "Numerology orb" },
+  { src: "/hero3.jpg", alt: "Sacred crystals" },
+  { src: "/hero4.jpg", alt: "Tarot cards" },
+];
 
 export default function Hero() {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((prev) => (prev + 1) % slides.length);
+    }, 4000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      <video autoPlay muted loop playsInline className="absolute inset-0 w-full h-full object-cover">
-        <source src="/hero.mp4" type="video/mp4" />
-      </video>
 
-      {/* Soft blush-lavender overlay matching wallpaper palette */}
-      <div className="absolute inset-0 bg-gradient-to-b from-purple-950/65 via-rose-950/40 to-purple-950/70" />
-      <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-rose-900/20" />
+      {/* Slideshow background */}
+      <AnimatePresence mode="sync">
+        <motion.div
+          key={current}
+          initial={{ opacity: 0, scale: 1.06 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.97 }}
+          transition={{ duration: 1.4, ease: "easeInOut" }}
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('${slides[current].src}')` }}
+        />
+      </AnimatePresence>
+
+      {/* Dark overlay for text legibility */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/30 to-black/65" />
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-950/30 via-transparent to-purple-950/20" />
 
       {/* Decorative stars */}
       <div className="absolute top-32 left-8 text-rose-300/40 text-5xl select-none">✦</div>
@@ -20,6 +47,7 @@ export default function Hero() {
       <div className="absolute bottom-32 left-16 text-rose-300/30 text-2xl select-none">✦</div>
       <div className="absolute bottom-24 right-8 text-purple-300/40 text-4xl select-none">✧</div>
 
+      {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 text-center pt-24">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -30,16 +58,16 @@ export default function Hero() {
           Tarot Pooja Chauhan
         </motion.h1>
 
-        <motion.h1
+        <motion.h2
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-8"
+          className="font-cinzel text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-200 via-purple-200 to-pink-200">
             Tarot Reader, Numerology &amp; Crystals
           </span>
-        </motion.h1>
+        </motion.h2>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -71,10 +99,30 @@ export default function Hero() {
             View Services
           </Link>
         </motion.div>
+
+        {/* Slide dots */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.6 }}
+          className="flex justify-center gap-2 mt-12"
+        >
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setCurrent(i)}
+              className={`transition-all duration-300 rounded-full ${
+                i === current ? "w-8 h-2 bg-white" : "w-2 h-2 bg-white/40"
+              }`}
+            />
+          ))}
+        </motion.div>
       </div>
 
+      {/* Bottom fade */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#FFF8F5] to-transparent" />
 
+      {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-rose-200/70 text-xs tracking-[0.3em] uppercase">
         <span>Scroll</span>
         <svg className="w-4 h-4 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
