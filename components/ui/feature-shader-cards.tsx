@@ -15,7 +15,7 @@ const features: Feature[] = [
     title: "Love & Relationship",
     description: "Clarity on soulmates, compatibility, timing, and what is truly holding your heart back.",
     icon: (
-      <svg className="w-28 h-28" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
+      <svg className="w-40 h-40" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
         <circle cx="50" cy="16" r="8"/>
         <path d="M43 23 Q34 34 26 46"/>
         <path d="M57 23 Q66 34 74 46"/>
@@ -28,7 +28,7 @@ const features: Feature[] = [
     title: "Crystals",
     description: "Harness the healing power of crystals — each stone a unique vibration aligned to your needs.",
     icon: (
-      <svg className="w-28 h-28" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
+      <svg className="w-40 h-40" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
         <path d="M50 12 L30 32 L50 88 L70 32 Z"/>
         <line x1="30" y1="32" x2="70" y2="32"/>
         <path d="M38 12 L50 12 L62 12"/>
@@ -43,7 +43,7 @@ const features: Feature[] = [
     title: "Work, Career & Money",
     description: "Understand the energies around your career path, finances, and the right timing to act.",
     icon: (
-      <svg className="w-28 h-28" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
+      <svg className="w-40 h-40" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
         <path d="M10 50 C10 50 25 20 50 20 C75 20 90 50 90 50 C90 50 75 80 50 80 C25 80 10 50 10 50 Z"/>
         <path d="M42 38 A14 14 0 0 0 42 62 A10 10 0 0 1 42 38"/>
       </svg>
@@ -53,7 +53,7 @@ const features: Feature[] = [
     title: "Tarot & Spell",
     description: "In-depth tarot spreads and intention-setting spells to remove blocks and attract what you deserve.",
     icon: (
-      <svg className="w-28 h-28" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
+      <svg className="w-40 h-40" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" viewBox="0 0 100 100">
         <circle cx="50" cy="50" r="38"/>
         <path d="M50 14 L56 36 L80 36 L61 50 L68 72 L50 58 L32 72 L39 50 L20 36 L44 36 Z"/>
       </svg>
