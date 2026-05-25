@@ -5,6 +5,11 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 
 const slides = [
+  { src: "/h1.jpg" },
+  { src: "/h2.jpg" },
+  { src: "/h3.jpg" },
+  { src: "/h4.jpg" },
+  { src: "/h5.jpg" },
   { src: "/a.jpg" },
   { src: "/b.jpg" },
   { src: "/c.jpg" },
@@ -26,10 +31,15 @@ export default function Hero() {
 
       {/* Ken Burns keyframes — each slide zooms in a different direction */}
       <style>{`
-        @keyframes kb1 { 0%{transform:scale(1.0) translate(0%,0%)}   100%{transform:scale(1.18) translate(-2%,-1%)} }
-        @keyframes kb2 { 0%{transform:scale(1.15) translate(-2%,0%)} 100%{transform:scale(1.0)  translate(2%, 1%)} }
-        @keyframes kb3 { 0%{transform:scale(1.0)  translate(2%, 1%)} 100%{transform:scale(1.18) translate(-1%,-2%)} }
-        @keyframes kb4 { 0%{transform:scale(1.15) translate(0%, 2%)} 100%{transform:scale(1.0)  translate(-2%,-1%)} }
+        @keyframes kb1 { 0%{transform:scale(1.0)  translate(0%,  0%)} 100%{transform:scale(1.18) translate(-2%,-1%)} }
+        @keyframes kb2 { 0%{transform:scale(1.15) translate(-2%, 0%)} 100%{transform:scale(1.0)  translate(2%,  1%)} }
+        @keyframes kb3 { 0%{transform:scale(1.0)  translate(2%,  1%)} 100%{transform:scale(1.18) translate(-1%,-2%)} }
+        @keyframes kb4 { 0%{transform:scale(1.15) translate(0%,  2%)} 100%{transform:scale(1.0)  translate(-2%,-1%)} }
+        @keyframes kb5 { 0%{transform:scale(1.0)  translate(-1%, 1%)} 100%{transform:scale(1.18) translate(2%,  -2%)} }
+        @keyframes kb6 { 0%{transform:scale(1.18) translate(2%, -1%)} 100%{transform:scale(1.0)  translate(-1%, 2%)} }
+        @keyframes kb7 { 0%{transform:scale(1.0)  translate(1%, -2%)} 100%{transform:scale(1.15) translate(-2%, 1%)} }
+        @keyframes kb8 { 0%{transform:scale(1.15) translate(-1%, 2%)} 100%{transform:scale(1.0)  translate(1%, -1%)} }
+        @keyframes kb9 { 0%{transform:scale(1.0)  translate(0%,  2%)} 100%{transform:scale(1.18) translate(1%,  -2%)} }
       `}</style>
 
       {/* All slides stacked — img tags for reliable rendering */}
