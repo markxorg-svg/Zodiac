@@ -53,7 +53,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.15 }}
-          className="font-cinzel text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-tight mb-4 whitespace-nowrap"
+          className="font-cinzel text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4 whitespace-nowrap"
         >
           Tarot Pooja Chauhan
         </motion.h1>
@@ -62,7 +62,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.25 }}
-          className="font-cinzel text-2xl md:text-4xl lg:text-5xl font-bold leading-tight mb-8"
+          className="font-cinzel text-xl md:text-2xl lg:text-3xl font-semibold leading-tight mb-8"
         >
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-rose-200 via-purple-200 to-pink-200">
             Tarot Reader, Numerology &amp; Crystals
@@ -90,7 +90,7 @@ export default function Hero() {
             target="_blank" rel="noopener noreferrer"
             className="px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-rose-500 hover:from-purple-500 hover:to-rose-400 text-white font-semibold text-lg transition-all shadow-2xl shadow-purple-700/40 hover:scale-105"
           >
-            ✦ Book a Reading
+            ✦ Book an Appointment Now
           </a>
           <Link
             href="#services"
