@@ -46,25 +46,30 @@ export default function Hero() {
       {slides.map(({ src }, i) => (
         <div
           key={src}
-          className="absolute inset-0"
+          className="absolute inset-0 overflow-hidden"
           style={{
             opacity: i === current ? 1 : 0,
-            transition: "opacity 0.9s ease-in-out",
+            transition: "opacity 1s ease-in-out",
             zIndex: i === current ? 1 : 0,
           }}
         >
-          <img
-            src={src}
-            alt=""
-            className="w-full h-full object-cover object-center"
-            style={{ animation: `kb${i + 1} 5s ease-in-out infinite alternate` }}
-          />
+          {/* Ken Burns wrapper — overflow hidden keeps zoom inside bounds */}
+          <div
+            className="absolute inset-0"
+            style={{ animation: `kb${(i % 9) + 1} 6s ease-in-out infinite alternate` }}
+          >
+            <img
+              src={src}
+              alt=""
+              style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center", display: "block" }}
+            />
+          </div>
         </div>
       ))}
 
-      {/* Overlays */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/25 to-black/80" />
-      <div className="absolute inset-0 z-10 bg-gradient-to-r from-purple-950/40 via-transparent to-black/20" />
+      {/* Overlays — light enough to show images, dark enough for text */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/40 via-black/10 to-black/65" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-purple-950/25 via-transparent to-black/10" />
 
       {/* Shimmer */}
       <motion.div
