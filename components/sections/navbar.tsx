@@ -45,7 +45,7 @@ export default function Navbar() {
           </ul>
 
           <a
-            href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20a%20reading!"
+            href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20an%20appointment!"
             target="_blank" rel="noopener noreferrer"
             className={`hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-500 ${
               scrolled
@@ -53,7 +53,7 @@ export default function Navbar() {
                 : "border border-white/60 text-white hover:bg-white/15 backdrop-blur-sm"
             }`}
           >
-            <span>✦</span> Book a Reading
+            <span>✦</span> Book an Appointment
           </a>
 
           <button
@@ -79,11 +79,11 @@ export default function Navbar() {
               ))}
             </ul>
             <a
-              href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20a%20reading!"
+              href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20an%20appointment!"
               target="_blank" rel="noopener noreferrer"
               className="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-700 to-purple-500 text-white text-sm font-semibold"
             >
-              ✦ Book a Reading
+              ✦ Book an Appointment
             </a>
           </div>
         )}

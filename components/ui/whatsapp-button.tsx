@@ -2,7 +2,7 @@
 
 export default function WhatsAppButton() {
   const phone = "919834946893";
-  const message = encodeURIComponent("Hi Pooja ji, I'd like to book a reading!");
+  const message = encodeURIComponent("Hi Pooja ji, I'd like to book an appointment!");
   const href = `https://wa.me/${phone}?text=${message}`;
 
   return (

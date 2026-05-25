@@ -14,29 +14,25 @@ const testimonials: Testimonial[] = [
     id: "9193184*****",
     date: "25 Nov 2024",
     badge: "Verified Purchase",
-    quote:
-      "Took a reading from her for the first time, I've gotta say she's really good at what she does. Her sense to interpret the meaning behind the cards is mind blowing. Keep up the good work Puja. God bless.",
+    quote: "Took a reading from her for the first time, I've gotta say she's really good at what she does. Her sense to interpret the meaning behind the cards is mind blowing. Keep up the good work Puja. God bless.",
   },
   {
     id: "9179819*****",
     date: "1 Dec 2024",
     badge: "Verified Purchase",
-    quote:
-      "The tarot reading was insightful and provided valuable guidance, empowering me to make positive changes.",
+    quote: "The tarot reading was insightful and provided valuable guidance, empowering me to make positive changes.",
   },
   {
     id: "9192164*****",
     date: "9 Apr 2025",
     badge: "Client Rating",
-    quote:
-      "Knowledgeable, pleasant, and honest. Extremely passionate about your reading. You have a deep intense and fervent knowledge — we created a strong connection not by blood but by heart. ~Avichal",
+    quote: "Knowledgeable, pleasant, and honest. Extremely passionate about your reading. You have a deep intense and fervent knowledge — we created a strong connection not by blood but by heart. ~Avichal",
   },
   {
     id: "9194255*****",
     date: "28 Nov 2025",
     badge: "Verified Purchase",
-    quote:
-      "Aap bahut sahajta se aur shanti se baat ko sunkar Taro dwara uska sahi samadhan aur stithi batati hain — you are excellent.",
+    quote: "Aap bahut sahajta se aur shanti se baat ko sunkar Taro dwara uska sahi samadhan aur stithi batati hain — you are excellent.",
   },
   {
     id: "9199960*****",
@@ -48,8 +44,7 @@ const testimonials: Testimonial[] = [
     id: "9186938*****",
     date: "1 May 2025",
     badge: "Verified Purchase",
-    quote:
-      "Thank you so much for your support and guidance on this matter. God bless you and keep helping people like me.",
+    quote: "Thank you so much for your support and guidance on this matter. God bless you and keep helping people like me.",
   },
   {
     id: "9198186*****",
@@ -83,69 +78,75 @@ const testimonials: Testimonial[] = [
   },
 ];
 
-const badgeColor: Record<Testimonial["badge"], string> = {
-  "Verified Purchase": "text-red-400",
-  "Client Rating":    "text-yellow-400",
-  "Free Rating":      "text-yellow-400",
-};
-
 export function TestimonialsSection() {
   return (
-    <section id="testimonials" className="relative py-24 px-4 bg-white overflow-hidden">
+    <section id="testimonials" className="relative py-32 px-4 bg-gradient-to-b from-[#0e0120] via-[#160830] to-[#0e0120] overflow-hidden">
+      <div className="absolute inset-0 opacity-[0.05]"
+        style={{ backgroundImage: "radial-gradient(circle, #ffffff 1px, transparent 1px)", backgroundSize: "40px 40px" }} />
+      <div className="absolute top-0 left-1/3 w-[700px] h-[500px] bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[500px] h-[400px] bg-rose-600/[0.07] rounded-full blur-3xl pointer-events-none" />
 
-      <div className="relative max-w-6xl mx-auto space-y-12">
-        {/* Header */}
-        <div>
+      <motion.div className="absolute top-16 right-20 text-purple-300/15 text-5xl select-none" animate={{ opacity: [0.1, 0.3, 0.1], rotate: [0, 10, 0] }} transition={{ duration: 7, repeat: Infinity }}>✦</motion.div>
+      <motion.div className="absolute bottom-20 left-16 text-rose-300/10 text-4xl select-none" animate={{ opacity: [0.1, 0.25, 0.1] }} transition={{ duration: 5, repeat: Infinity, delay: 2 }}>✧</motion.div>
+
+      <div className="relative max-w-6xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="text-center mb-16"
+        >
           <div className="flex items-center gap-4 mb-6 justify-center">
-            <span className="flex-1 h-px bg-gradient-to-r from-transparent to-purple-400" />
-            <span className="font-cinzel text-purple-600 text-sm tracking-[0.3em] uppercase">Client Reviews</span>
-            <span className="flex-1 h-px bg-gradient-to-l from-transparent to-purple-400" />
+            <span className="flex-1 h-px bg-gradient-to-r from-transparent to-purple-400/40" />
+            <span className="font-cinzel text-purple-400 text-sm tracking-[0.3em] uppercase">Client Reviews</span>
+            <span className="flex-1 h-px bg-gradient-to-l from-transparent to-purple-400/40" />
           </div>
-          <h2 className="font-cinzel text-3xl md:text-5xl font-bold text-gray-900 text-center mb-3">
+          <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-4">
             Real Results, Real Voices
           </h2>
-          <p className="text-gray-500 text-center text-sm md:text-base max-w-xl mx-auto">
+          <p className="text-purple-300/55 text-base max-w-xl mx-auto">
             Verified reviews from real clients — every rating earned through an actual reading with Pooja.
           </p>
-        </div>
+        </motion.div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {testimonials.map(({ id, quote, badge }, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.06 * index, duration: 0.6 }}
               key={index}
-              className="flex flex-col gap-3 p-5 rounded-2xl bg-white border border-gray-200 hover:border-purple-300 hover:shadow-md transition-all shadow-sm"
+              className="relative flex flex-col gap-4 p-6 rounded-2xl border border-white/10 bg-white/[0.04] hover:bg-white/[0.07] hover:border-purple-400/25 transition-all backdrop-blur-sm group"
             >
-              {/* Top row */}
-              <div className="flex items-center gap-3">
-                <div className="size-10 rounded-full bg-purple-100 border border-purple-200 flex items-center justify-center flex-shrink-0">
-                  <svg className="size-5 text-purple-500" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-gray-800 text-sm font-mono tracking-tight">{id}</p>
-                  <div className="flex items-center gap-2 mt-0.5">
-                    <span className={`text-[10px] font-semibold ${badgeColor[badge]}`}>{badge}</span>
-                  </div>
-                </div>
-              </div>
+              {/* Large decorative quote mark */}
+              <div className="absolute top-3 right-5 font-serif text-7xl text-purple-300/10 leading-none select-none group-hover:text-purple-300/18 transition-colors">&ldquo;</div>
 
               {/* Stars */}
               <div className="flex gap-1">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <svg key={i} className="size-4 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                  <svg key={i} className="size-4 text-amber-400" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
                   </svg>
                 ))}
               </div>
 
               {/* Quote */}
-              <p className="text-gray-700 text-sm leading-relaxed flex-1">{quote}</p>
+              <p className="text-white/75 text-sm leading-relaxed flex-1 italic">&ldquo;{quote}&rdquo;</p>
+
+              {/* Bottom */}
+              <div className="flex items-center gap-3 pt-3 border-t border-white/10">
+                <div className="size-8 rounded-full bg-purple-800/60 border border-purple-500/30 flex items-center justify-center flex-shrink-0">
+                  <svg className="size-4 text-purple-300" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-purple-300/60 text-xs font-mono tracking-tight">{id}</p>
+                  <span className={`text-[10px] font-semibold ${badge === "Verified Purchase" ? "text-emerald-400/80" : "text-amber-400/80"}`}>{badge}</span>
+                </div>
+              </div>
             </motion.div>
           ))}
         </div>

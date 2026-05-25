@@ -71,11 +71,11 @@ export default function PulseCTA() {
           Book a personal session with Pooja Chauhan and receive guidance that is truly yours.
         </p>
         <a
-          href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20a%20reading!"
+          href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20an%20appointment!"
           target="_blank" rel="noopener noreferrer"
           className="px-8 py-3 rounded-full bg-gradient-to-r from-rose-400 to-purple-500 hover:from-rose-300 hover:to-purple-400 text-white font-semibold transition-all shadow-lg shadow-rose-400/30"
         >
-          ✦ Book Now
+          ✦ Book an Appointment
         </a>
       </div>
     </PulseBeams>
