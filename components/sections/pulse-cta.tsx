@@ -75,7 +75,7 @@ export default function PulseCTA() {
           target="_blank" rel="noopener noreferrer"
           className="px-8 py-3 rounded-full bg-gradient-to-r from-rose-400 to-purple-500 hover:from-rose-300 hover:to-purple-400 text-white font-semibold transition-all shadow-lg shadow-rose-400/30"
         >
-          ✦ Book an Appointment
+          ✦ Book a Consultation
         </a>
       </div>
     </PulseBeams>

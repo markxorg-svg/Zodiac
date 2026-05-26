@@ -62,7 +62,7 @@ export default function WhyUs() {
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-500 to-rose-500 text-white font-semibold hover:from-purple-400 hover:to-rose-400 transition-all shadow-xl shadow-purple-900/50 hover:scale-[1.02]"
             >
-              ✦ Book an Appointment
+              ✦ Book a Consultation
             </a>
           </motion.div>
 

@@ -52,7 +52,7 @@ export default function Navbar() {
                 : "border border-white/60 text-white hover:bg-white/15 backdrop-blur-sm"
             }`}
           >
-            <span>✦</span> Book an Appointment
+            <span>✦</span> Book a Consultation
           </a>
 
           <button
@@ -82,7 +82,7 @@ export default function Navbar() {
               target="_blank" rel="noopener noreferrer"
               className="mt-5 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-purple-700 to-purple-500 text-white text-sm font-semibold"
             >
-              ✦ Book an Appointment
+              ✦ Book a Consultation
             </a>
           </div>
         )}

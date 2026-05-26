@@ -180,7 +180,7 @@ export default function FeaturesCards() {
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-700 to-rose-500 text-white font-semibold hover:from-purple-600 hover:to-rose-400 transition-all shadow-lg shadow-purple-300/40 hover:scale-[1.02]"
           >
-            ✦ Book an Appointment
+            ✦ Book a Consultation
           </a>
         </motion.div>
       </div>
