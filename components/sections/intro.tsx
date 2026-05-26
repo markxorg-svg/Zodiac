@@ -87,9 +87,9 @@ export default function Intro() {
           >
             <p className="font-cinzel text-purple-500 text-xs tracking-[0.4em] uppercase mb-3">Tarot · Numerology · Crystals</p>
             <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-purple-900 mb-8 leading-tight">
-              Meet Your<br />
+              Know Me Better<br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-rose-500">
-                Spiritual Guide
+                Pooja
               </span>
             </h2>
 
