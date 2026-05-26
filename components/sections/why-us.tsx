@@ -3,10 +3,10 @@
 import { motion } from "framer-motion";
 
 const services = [
-  { name: "Love & Relationship", icon: "💕", desc: "Clarity on soulmates, compatibility, timing, and what is truly holding your heart back." },
-  { name: "Mediumship",          icon: "🕊", desc: "Compassionate connections with loved ones who have passed — messages, closure, and peace." },
-  { name: "Work, Career & Money",icon: "💫", desc: "Understand the energies around your career path, finances, and the right timing to act." },
-  { name: "Tarot & Spell",       icon: "🔮", desc: "In-depth tarot spreads and intention-setting spells to remove blocks and attract what you deserve." },
+  { name: "Personal & Confidential",    icon: "🔐", desc: "Every reading is held in complete privacy — just between you and me. What you share stays sacred." },
+  { name: "Available Worldwide",        icon: "🌍", desc: "Sessions via WhatsApp, video call, or email report — wherever you are in the world, I am here." },
+  { name: "20+ Years of Practice",      icon: "✨", desc: "Two decades and over 20,000 readings have sharpened my ability to tune into your unique energy." },
+  { name: "Honest, Not Just Comforting",icon: "🕊", desc: "You receive truth delivered with compassion — real clarity, not empty reassurance." },
 ];
 
 export default function WhyUs() {
