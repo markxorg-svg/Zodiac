@@ -1,50 +1,42 @@
 import Navbar from "@/components/sections/navbar";
 import Hero from "@/components/sections/hero";
 import Intro from "@/components/sections/intro";
-import FeaturesCards from "@/components/ui/feature-shader-cards";
-import Crystals from "@/components/sections/crystals";
-import Stats from "@/components/sections/stats";
-import PulseCTA from "@/components/sections/pulse-cta";
-import { TestimonialsSection } from "@/components/ui/testimonials-section";
-import LeaveReview from "@/components/sections/leave-review";
 import WhyUs from "@/components/sections/why-us";
+import FeaturesCards from "@/components/ui/feature-shader-cards";
+import BestReadings from "@/components/sections/best-readings";
+import { TestimonialsSection } from "@/components/ui/testimonials-section";
+import Crystals from "@/components/sections/crystals";
 import Footer from "@/components/sections/footer";
 import WhatsAppButton from "@/components/ui/whatsapp-button";
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen bg-[#FFF8F5]">
-      {/* 1. Navigation */}
+      {/* Navigation */}
       <Navbar />
 
-      {/* 2. Hero */}
+      {/* 1. Hero */}
       <Hero />
 
-      {/* 3. About / Intro */}
+      {/* 2. Intro — Know Me Better Pooja */}
       <Intro />
 
-      {/* 4. Features / Services Cards */}
-      <FeaturesCards />
-
-      {/* 5. Crystals */}
-      <Crystals />
-
-      {/* 6. Statistics */}
-      <Stats />
-
-      {/* 6. PulseBeams CTA */}
-      <PulseCTA />
-
-      {/* 8. Testimonials */}
-      <TestimonialsSection />
-
-      {/* 9. Leave a Review */}
-      <LeaveReview />
-
-      {/* 10. Why Work With Us */}
+      {/* 3. Consult — A Reading That Is Truly Yours */}
       <WhyUs />
 
-      {/* 10. Footer */}
+      {/* 4. Services */}
+      <FeaturesCards />
+
+      {/* 5. How to Get the Best Reading */}
+      <BestReadings />
+
+      {/* 6. My Happy Client Reviews */}
+      <TestimonialsSection />
+
+      {/* 7. Crystals */}
+      <Crystals />
+
+      {/* 8. Contact / Footer */}
       <Footer />
 
       {/* Floating WhatsApp */}
