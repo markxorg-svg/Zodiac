@@ -143,14 +143,6 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.8 }}
           className="flex flex-col sm:flex-row gap-4 justify-center"
         >
-          <a
-            href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20an%20appointment!"
-            target="_blank" rel="noopener noreferrer"
-            className="relative overflow-hidden px-10 py-4 rounded-full bg-gradient-to-r from-purple-600 to-rose-500 text-white font-semibold text-lg transition-all shadow-2xl shadow-purple-700/50 hover:scale-105 hover:shadow-rose-500/40 group"
-          >
-            <span className="relative z-10">✦ Book a Consultation Now</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-rose-500 to-purple-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-          </a>
           <Link
             href="#services"
             className="px-10 py-4 rounded-full border border-white/30 text-white hover:bg-white/10 hover:border-white/60 font-semibold text-lg transition-all backdrop-blur-sm"
