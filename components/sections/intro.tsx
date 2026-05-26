@@ -127,21 +127,6 @@ export default function Intro() {
               </div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.5 }}
-              className="mt-10"
-            >
-              <a
-                href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20an%20appointment!"
-                target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-gradient-to-r from-purple-700 to-rose-500 text-white font-semibold hover:from-purple-600 hover:to-rose-400 transition-all shadow-lg shadow-purple-300/40 hover:shadow-purple-400/50 hover:scale-[1.02]"
-              >
-                ✦ Book an Appointment
-              </a>
-            </motion.div>
           </motion.div>
         </div>
       </div>
