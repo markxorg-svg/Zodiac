@@ -23,10 +23,9 @@ export default function Navbar() {
         <div className="max-w-7xl mx-auto flex items-center justify-between h-24">
           <Link href="/">
             <img
-              src="/logo-transparent.png"
+              src="/logo.png"
               alt="Tarot Pooja Chauhan"
-              className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
-              style={{ filter: scrolled ? "none" : "drop-shadow(0 0 6px rgba(255,210,120,0.55)) brightness(1.15)" }}
+              className="h-20 w-auto object-contain rounded-xl hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
