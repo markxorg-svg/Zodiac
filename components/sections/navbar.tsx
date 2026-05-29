@@ -1,45 +1,32 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-      <nav className={`px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
-        scrolled
-          ? "bg-white/90 backdrop-blur-xl border-b border-purple-200/60 shadow-sm shadow-purple-100"
-          : "bg-transparent"
-      }`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between h-24">
+      <nav className="px-4 sm:px-6 lg:px-8 bg-white border-b border-purple-100 shadow-sm shadow-purple-50">
+        <div className="max-w-7xl mx-auto flex items-center justify-between h-20">
           <Link href="/">
-            <div className="bg-white px-3 py-1 flex items-center justify-center h-24 -my-0">
-              <img
-                src="/logo.png"
-                alt="Tarot Pooja Chauhan"
-                className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
-              />
-            </div>
+            <img
+              src="/logo.png"
+              alt="Tarot Pooja Chauhan"
+              className="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
+            />
           </Link>
 
-          <ul className={`hidden md:flex gap-8 text-sm tracking-wider transition-colors duration-500 ${scrolled ? "text-purple-700" : "text-white/90"}`}>
+          <ul className="hidden md:flex gap-8 text-sm tracking-wider text-purple-700">
             {["Home", "Services", "About", "Testimonials", "Contact"].map((item) => (
               <li key={item}>
                 <Link
                   href={`#${item.toLowerCase()}`}
-                  className={`transition-colors relative group ${scrolled ? "hover:text-purple-500" : "hover:text-white"}`}
+                  className="transition-colors relative group hover:text-purple-500"
                 >
                   {item}
-                  <span className={`absolute -bottom-1 left-0 w-0 h-px transition-all group-hover:w-full ${scrolled ? "bg-purple-400" : "bg-white/70"}`} />
+                  <span className="absolute -bottom-1 left-0 w-0 h-px transition-all group-hover:w-full bg-purple-400" />
                 </Link>
               </li>
             ))}
@@ -48,17 +35,13 @@ export default function Navbar() {
           <a
             href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20an%20appointment!"
             target="_blank" rel="noopener noreferrer"
-            className={`hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold transition-all duration-500 ${
-              scrolled
-                ? "bg-gradient-to-r from-purple-700 to-purple-500 text-white shadow-md shadow-purple-300/40 hover:from-purple-600 hover:to-purple-400"
-                : "border border-white/60 text-white hover:bg-white/15 backdrop-blur-sm"
-            }`}
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-700 to-purple-500 text-white shadow-md shadow-purple-300/40 hover:from-purple-600 hover:to-purple-400 transition-all duration-300"
           >
             <span>✦</span> Book a Consultation
           </a>
 
           <button
-            className={`md:hidden p-2 transition-colors ${scrolled ? "text-purple-800" : "text-white"}`}
+            className="md:hidden p-2 transition-colors text-purple-800"
             onClick={() => setOpen(!open)}
             aria-label="Toggle menu"
           >
