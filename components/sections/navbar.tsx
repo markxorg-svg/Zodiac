@@ -22,11 +22,13 @@ export default function Navbar() {
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between h-24">
           <Link href="/">
-            <img
-              src="/logo.png"
-              alt="Tarot Pooja Chauhan"
-              className="h-20 w-auto object-contain rounded-xl hover:scale-105 transition-transform duration-300"
-            />
+            <div className="bg-white px-3 py-1 flex items-center justify-center h-24 -my-0">
+              <img
+                src="/logo.png"
+                alt="Tarot Pooja Chauhan"
+                className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           </Link>
 
           <ul className={`hidden md:flex gap-8 text-sm tracking-wider transition-colors duration-500 ${scrolled ? "text-purple-700" : "text-white/90"}`}>
