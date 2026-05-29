@@ -26,6 +26,7 @@ export default function Navbar() {
               src="/logo-transparent.png"
               alt="Tarot Pooja Chauhan"
               className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              style={{ filter: scrolled ? "none" : "drop-shadow(0 0 6px rgba(255,210,120,0.55)) brightness(1.15)" }}
             />
           </Link>
 
