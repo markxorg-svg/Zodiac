@@ -29,7 +29,7 @@ export default function Footer() {
           <ul className="text-sm space-y-2">
             {serviceLinks.map((s) => (
               <li key={s}>
-                <a href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20a%20reading!"
+                <a href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20an%20appointment!"
                   target="_blank" rel="noopener noreferrer"
                   className="text-purple-200 hover:text-rose-200 transition-colors">{s}</a>
               </li>
@@ -54,7 +54,7 @@ export default function Footer() {
             Ready for clarity? Reach out directly on WhatsApp and Pooja will personally connect with you.
           </p>
           <a
-            href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20a%20reading!"
+            href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20an%20appointment!"
             target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-rose-400 to-purple-500 text-white text-sm font-semibold hover:from-rose-300 hover:to-purple-400 transition-all shadow-lg shadow-rose-500/20"
           >
