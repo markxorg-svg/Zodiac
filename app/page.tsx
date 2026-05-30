@@ -1,7 +1,6 @@
 import Navbar from "@/components/sections/navbar";
 import Hero from "@/components/sections/hero";
 import Intro from "@/components/sections/intro";
-import WhyUs from "@/components/sections/why-us";
 import FeaturesCards from "@/components/ui/feature-shader-cards";
 import BestReadings from "@/components/sections/best-readings";
 import { TestimonialsSection } from "@/components/ui/testimonials-section";
@@ -21,10 +20,7 @@ export default function Home() {
       {/* 2. Intro — Know Me Better Pooja */}
       <Intro />
 
-      {/* 3. Consult — A Reading That Is Truly Yours */}
-      <WhyUs />
-
-      {/* 4. Services */}
+      {/* 3. Services */}
       <FeaturesCards />
 
       {/* 5. How to Get the Best Reading */}
