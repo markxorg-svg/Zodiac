@@ -125,17 +125,6 @@ export default function Hero() {
           </span>
         </motion.h2>
 
-        {/* Description */}
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 0.65 }}
-          className="text-white/70 text-base md:text-lg mb-10 max-w-xl mx-auto leading-relaxed tracking-wide"
-        >
-          Individual online readings for love, career, numerology &amp; tarot —
-          personalised guidance you can truly trust.
-        </motion.p>
-
         {/* CTAs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}

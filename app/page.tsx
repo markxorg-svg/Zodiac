@@ -3,6 +3,7 @@ import Hero from "@/components/sections/hero";
 import Intro from "@/components/sections/intro";
 import FeaturesCards from "@/components/ui/feature-shader-cards";
 import BestReadings from "@/components/sections/best-readings";
+import ConsultBanner from "@/components/sections/consult-banner";
 import { TestimonialsSection } from "@/components/ui/testimonials-section";
 import Crystals from "@/components/sections/crystals";
 import Footer from "@/components/sections/footer";
@@ -20,7 +21,10 @@ export default function Home() {
       {/* 2. Intro — Know Me Better Pooja */}
       <Intro />
 
-      {/* 3. Services */}
+      {/* 3. Consult Banner */}
+      <ConsultBanner />
+
+      {/* 4. Services */}
       <FeaturesCards />
 
       {/* 5. How to Get the Best Reading */}
