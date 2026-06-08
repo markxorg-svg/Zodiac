@@ -26,7 +26,7 @@ export default function Intro() {
           <span className="flex-1 h-px bg-gradient-to-l from-transparent to-purple-300" />
         </motion.div>
 
-        <div className="flex flex-col md:flex-row items-start gap-16">
+        <div className="flex flex-col md:flex-row items-stretch gap-16">
 
           {/* Photo */}
           <motion.div
@@ -34,17 +34,15 @@ export default function Intro() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            className="flex-shrink-0 relative self-start md:sticky md:top-32"
+            className="flex-shrink-0 relative md:sticky md:top-32 self-stretch md:self-auto"
           >
             <div className="absolute -inset-4 rounded-[2.5rem] bg-gradient-to-br from-purple-300/40 via-rose-200/20 to-purple-200/30 blur-2xl" />
-            <div className="relative w-72 md:w-80 rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-purple-200/60">
+            <div className="relative w-72 md:w-80 rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-purple-200/60 h-full min-h-[480px]">
               <Image
                 src="/pooja.jpg"
                 alt="Tarot Pooja Chauhan"
-                width={320}
-                height={480}
-                className="object-cover object-top w-full"
-                style={{ height: "480px" }}
+                fill
+                className="object-cover object-top"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 via-transparent to-transparent" />
