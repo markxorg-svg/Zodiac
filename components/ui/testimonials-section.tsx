@@ -139,17 +139,9 @@ export function TestimonialsSection() {
           transition={{ duration: 0.7 }}
           className="text-center"
         >
-          <div className="flex items-center gap-4 mb-6 justify-center">
-            <span className="flex-1 h-px bg-gradient-to-r from-transparent to-purple-400/40" />
-            <span className="font-cinzel text-purple-400 text-sm tracking-[0.3em] uppercase">Client Reviews</span>
-            <span className="flex-1 h-px bg-gradient-to-l from-transparent to-purple-400/40" />
-          </div>
           <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-white mb-4">
-            Real Results, Real Voices
+            Happy Clients
           </h2>
-          <p className="text-purple-300/55 text-base max-w-xl mx-auto">
-            Verified reviews from real clients — every rating earned through an actual reading with Pooja.
-          </p>
         </motion.div>
       </div>
 

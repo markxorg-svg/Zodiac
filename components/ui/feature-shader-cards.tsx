@@ -65,22 +65,22 @@ const shaderConfigs = [
   {
     proportion: 0.3, softness: 0.8, distortion: 0.15, swirl: 0.6, swirlIterations: 8,
     shape: "checks" as const, shapeScale: 0.08,
-    colors: ["hsl(280, 100%, 20%)", "hsl(320, 100%, 45%)", "hsl(340, 90%, 30%)", "hsl(300, 100%, 55%)"],
+    colors: ["hsl(340, 100%, 90%)", "hsl(0, 0%, 100%)", "hsl(350, 80%, 85%)", "hsl(0, 0%, 98%)"],
   },
   {
     proportion: 0.4, softness: 1.2, distortion: 0.2, swirl: 0.9, swirlIterations: 12,
     shape: "stripes" as const, shapeScale: 0.12,
-    colors: ["hsl(160, 100%, 15%)", "hsl(180, 100%, 40%)", "hsl(140, 90%, 25%)", "hsl(170, 100%, 50%)"],
+    colors: ["hsl(0, 0%, 100%)", "hsl(330, 100%, 88%)", "hsl(0, 0%, 96%)", "hsl(345, 90%, 92%)"],
   },
   {
     proportion: 0.38, softness: 0.95, distortion: 0.16, swirl: 0.85, swirlIterations: 11,
     shape: "checks" as const, shapeScale: 0.11,
-    colors: ["hsl(250, 100%, 20%)", "hsl(270, 100%, 50%)", "hsl(240, 90%, 28%)", "hsl(260, 100%, 60%)"],
+    colors: ["hsl(340, 100%, 87%)", "hsl(0, 0%, 100%)", "hsl(320, 80%, 90%)", "hsl(0, 0%, 97%)"],
   },
   {
     proportion: 0.42, softness: 1.0, distortion: 0.19, swirl: 0.75, swirlIterations: 9,
     shape: "edge" as const, shapeScale: 0.13,
-    colors: ["hsl(330, 100%, 20%)", "hsl(350, 100%, 45%)", "hsl(340, 90%, 28%)", "hsl(345, 100%, 60%)"],
+    colors: ["hsl(0, 0%, 100%)", "hsl(340, 100%, 88%)", "hsl(0, 0%, 95%)", "hsl(350, 80%, 93%)"],
   },
 ];
 
@@ -96,11 +96,6 @@ export default function FeaturesCards() {
           transition={{ duration: 0.7 }}
           className="text-center mb-14"
         >
-          <div className="flex items-center gap-4 mb-6 justify-center">
-            <span className="flex-1 h-px bg-gradient-to-r from-transparent to-purple-300" />
-            <span className="font-cinzel text-purple-600 text-sm tracking-[0.3em] uppercase">What I Offer</span>
-            <span className="flex-1 h-px bg-gradient-to-l from-transparent to-purple-300" />
-          </div>
           <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-purple-900 mb-4">My Services</h2>
           <p className="text-purple-600/70 text-lg max-w-2xl mx-auto leading-relaxed">
             Four areas of deep spiritual guidance — each reading fully personal to your energy and situation.
@@ -138,26 +133,26 @@ export default function FeaturesCards() {
                   />
                 </div>
 
-                {/* Dark overlay — lightens on hover to reveal shader */}
-                <div className="absolute inset-0 bg-black/60 group-hover:bg-black/35 transition-all duration-700" />
+                {/* Soft overlay */}
+                <div className="absolute inset-0 bg-white/10 group-hover:bg-white/0 transition-all duration-700" />
 
                 {/* Border glow on hover */}
-                <div className="absolute inset-0 rounded-3xl ring-1 ring-white/15 group-hover:ring-white/35 transition-all duration-500" />
+                <div className="absolute inset-0 rounded-3xl ring-1 ring-rose-200/60 group-hover:ring-rose-300/80 transition-all duration-500" />
 
                 {/* Content */}
                 <div className="relative z-10 h-full flex flex-col items-center justify-between p-8">
 
                   {/* Icon — centered, grows slightly on hover */}
                   <div className="flex-1 flex items-center justify-center">
-                    <div className="text-white/90 group-hover:text-white transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.4)]">
+                    <div className="text-rose-400/80 group-hover:text-rose-500 transition-all duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_20px_rgba(244,114,182,0.5)]">
                       {feature.icon}
                     </div>
                   </div>
 
                   {/* Title + description */}
                   <div className="text-center">
-                    <h3 className="font-cinzel text-xl font-bold text-white mb-2 tracking-wide">{feature.title}</h3>
-                    <p className="text-white/0 group-hover:text-white/75 text-xs leading-relaxed transition-all duration-500 max-h-0 group-hover:max-h-20 overflow-hidden">
+                    <h3 className="font-cinzel text-xl font-bold text-purple-900 mb-2 tracking-wide">{feature.title}</h3>
+                    <p className="text-purple-800/0 group-hover:text-purple-800/75 text-xs leading-relaxed transition-all duration-500 max-h-0 group-hover:max-h-20 overflow-hidden">
                       {feature.description}
                     </p>
                   </div>

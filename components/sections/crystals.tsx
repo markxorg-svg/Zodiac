@@ -48,22 +48,10 @@ export default function Crystals() {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <div className="flex items-center gap-4 mb-6 justify-center">
-            <span className="flex-1 h-px bg-gradient-to-r from-transparent to-purple-300" />
-            <span className="font-cinzel text-purple-600 text-sm tracking-[0.3em] uppercase">Sacred Stones</span>
-            <span className="flex-1 h-px bg-gradient-to-l from-transparent to-purple-300" />
-          </div>
-
           <div className="text-center mb-2">
             <h2 className="font-cinzel text-4xl md:text-5xl font-bold text-purple-900 mb-4">Crystals</h2>
-            <p className="text-purple-600/80 text-lg max-w-2xl mx-auto leading-relaxed mb-3">
-              Every crystal holds an ancient frequency — chosen for you, attuned to your energy, and placed with intention to heal, protect, and manifest. ✨
-            </p>
-            <p className="text-purple-700 text-lg max-w-2xl mx-auto leading-relaxed mb-3">
-              Order your crystal today and invite the energy your soul has been searching for. 💫
-            </p>
-            <p className="text-purple-900 font-semibold text-lg max-w-2xl mx-auto leading-relaxed italic font-cinzel">
-              Because the right crystal doesn&apos;t just find you — it changes you.
+            <p className="text-purple-600/80 text-lg max-w-2xl mx-auto leading-relaxed">
+              We sell authentic crystals, gemstone and spiritual products for healing, protection, manifestation, and positive energy.
             </p>
           </div>
         </motion.div>

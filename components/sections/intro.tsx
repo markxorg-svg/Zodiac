@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const clairs = ["Clairvoyance", "Clairaudience", "Clairsentience", "Claircognizance", "Clairalience"];
+const clairs = ["Precognition", "Clairsentience", "Claircognizance"];
 
 export default function Intro() {
   return (
@@ -54,27 +54,6 @@ export default function Intro() {
               </div>
             </div>
 
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.6, duration: 0.5, type: "spring" }}
-              className="absolute -right-5 top-12 bg-white rounded-2xl shadow-xl shadow-purple-200/60 px-4 py-3 border border-purple-100 text-center"
-            >
-              <div className="font-cinzel text-2xl font-bold text-purple-800">20+</div>
-              <div className="text-purple-500 text-[10px] tracking-widest uppercase mt-0.5">Years</div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.75, duration: 0.5, type: "spring" }}
-              className="absolute -left-5 bottom-20 bg-white rounded-2xl shadow-xl shadow-rose-200/60 px-4 py-3 border border-rose-100 text-center"
-            >
-              <div className="font-cinzel text-2xl font-bold text-rose-700">20k+</div>
-              <div className="text-rose-400 text-[10px] tracking-widest uppercase mt-0.5">Clients</div>
-            </motion.div>
           </motion.div>
 
           {/* Text */}
@@ -93,25 +72,17 @@ export default function Intro() {
               </span>
             </h2>
 
-            <div className="space-y-4 text-purple-800/70 leading-relaxed text-base">
+            <div className="space-y-4 text-purple-800/70 leading-relaxed text-lg">
               <p>
-                I am Pooja, a gifted Psychic, Tarot Reader, Clairvoyant, Energy Reader, Empath, and White Witch with a deep connection to the universe and spiritual energies. Through my psychic abilities, clairvoyance, precognition, intuition, and tarot guidance, I help people gain clarity, healing, direction, and deeper insight into their life journey.
+                Since childhood, I&apos;ve had unexplained experiences that led me to discover my natural psychic abilities. I feel connected to the universe and receive guidance through intuition, visions, feelings, and spiritual messages. My predictions can offer insight and direction, but the future is never set in stone — free will always plays a role.
               </p>
-              <p>
-                I had many strange and unexplainable experiences during my childhood, but at that time I couldn&apos;t fully understand what was happening to me. As I grew older, I discovered that I have natural psychic and intuitive abilities, and suddenly everything started making sense.
-              </p>
-              <p>
-                I feel deeply connected to the universe and guided by divine spiritual energies. Through my abilities, I receive messages, emotions, signs, and intuitive insights from angels, souls, archangels, and ascended masters. This connection helps me understand energies beyond the physical world and guide people toward clarity and direction.
-              </p>
-              <p>
-                I have strong intuition and the ability to predict situations with accuracy through spiritual guidance and inner knowing. I believe predictions are not fixed outcomes set in stone — they are messages that help reveal possible paths, opportunities, and guidance for the future.
-              </p>
+
             </div>
 
-            {/* 5 Clairs */}
+            {/* 3 Clairs */}
             <div className="mt-10">
-              <p className="font-cinzel text-purple-700 text-xs tracking-[0.3em] uppercase mb-5">Blessed with the 5 Sacred Clairs</p>
-              <div className="flex flex-wrap gap-3">
+              <p className="font-cinzel text-purple-700 text-xs tracking-[0.3em] uppercase mb-5">Blessed with the 3 Main Clairs</p>
+              <div className="flex flex-col gap-3">
                 {clairs.map((clair, i) => (
                   <motion.span
                     key={clair}
@@ -126,6 +97,10 @@ export default function Intro() {
                 ))}
               </div>
             </div>
+
+            <p className="mt-8 text-purple-800/70 leading-relaxed text-lg">
+              I am Pooja, a Psychic, Tarot Reader, Medium, Clairvoyant, Energy Reader, Empath, and White Witch. Using intuition, clairvoyance, and tarot, I provide guidance, clarity, and spiritual insight.
+            </p>
 
           </motion.div>
         </div>
