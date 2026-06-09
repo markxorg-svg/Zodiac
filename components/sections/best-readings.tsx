@@ -46,7 +46,7 @@ export default function BestReadings() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="mt-14 relative w-full rounded-3xl overflow-hidden shadow-2xl shadow-rose-200/50 ring-1 ring-purple-100/60"
+          className="mt-14 relative w-full overflow-hidden"
           style={{ aspectRatio: "16/9" }}
         >
           <Image
