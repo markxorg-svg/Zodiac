@@ -18,14 +18,14 @@ export default function Navbar() {
       <nav className={`px-4 sm:px-6 lg:px-8 transition-all duration-500 ${
         scrolled
           ? "bg-white/90 backdrop-blur-xl border-b border-purple-200/60 shadow-sm shadow-purple-100"
-          : "bg-transparent"
+          : "bg-gradient-to-b from-black/40 via-black/10 to-transparent"
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between h-24">
           <Link href="/">
             <img
               src="/logo.png"
               alt="Tarot Pooja Chauhaan"
-              className="h-16 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              className="h-24 w-auto object-contain hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
