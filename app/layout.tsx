@@ -15,9 +15,33 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Tarot Pooja Chauhan — Astrology, Tarot & Spiritual Readings",
+  title: "Tarot Pooja Chauhaan — Tarot Reader, Numerology & Crystal Healer",
   description:
-    "Personal astrology, tarot, mediumship and spell readings by Tarot Pooja Chauhan. Love, career, spiritual guidance — online sessions worldwide.",
+    "Book a personal tarot reading, numerology session, or crystal healing with Tarot Pooja Chauhaan. Psychic, Clairvoyant & Medium with 20+ years of experience. Available worldwide on WhatsApp.",
+  keywords: [
+    "tarot reader", "tarot reading online", "Pooja Chauhaan", "psychic reading",
+    "numerology", "crystal healing", "clairvoyant", "medium", "spiritual reading",
+    "love tarot reading", "career tarot reading", "tarot reader India",
+    "online tarot reading", "WhatsApp tarot reading",
+  ],
+  authors: [{ name: "Tarot Pooja Chauhaan" }],
+  openGraph: {
+    title: "Tarot Pooja Chauhaan — Tarot Reader, Numerology & Crystal Healer",
+    description:
+      "Book a personal tarot reading, numerology session, or crystal healing with Tarot Pooja Chauhaan. 20+ years experience. Available worldwide.",
+    url: "https://zodiac-delta-henna.vercel.app",
+    siteName: "Tarot Pooja Chauhaan",
+    images: [{ url: "/pooja.jpg", width: 1200, height: 630, alt: "Tarot Pooja Chauhaan" }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tarot Pooja Chauhaan — Tarot Reader, Numerology & Crystal Healer",
+    description: "Book a personal tarot reading with Pooja Chauhaan. 20+ years experience. Available worldwide on WhatsApp.",
+    images: ["/pooja.jpg"],
+  },
+  robots: { index: true, follow: true },
+  metadataBase: new URL("https://zodiac-delta-henna.vercel.app"),
 };
 
 export default function RootLayout({
