@@ -21,7 +21,7 @@ export default function Navbar() {
           : "bg-gradient-to-b from-black/40 via-black/10 to-transparent"
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between h-24">
-          <Link href="/" className="self-start">
+          <Link href="/" className="self-end">
             <img
               src="/logo.png"
               alt="Tarot Pooja Chauhaan"
