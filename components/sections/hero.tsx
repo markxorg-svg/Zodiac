@@ -91,17 +91,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-30 max-w-4xl mx-auto px-4 text-center pt-28">
 
-        {/* Est. badge */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, delay: 0.1 }}
-          className="mb-5 flex items-center justify-center gap-3"
-        >
-          <span className="h-px w-16 bg-gradient-to-r from-transparent to-rose-300/60" />
-          <span className="font-cinzel text-rose-200/80 text-xs tracking-[0.45em] uppercase">Est. 2004</span>
-          <span className="h-px w-16 bg-gradient-to-l from-transparent to-rose-300/60" />
-        </motion.div>
+
 
         {/* Main heading */}
         <motion.h1
