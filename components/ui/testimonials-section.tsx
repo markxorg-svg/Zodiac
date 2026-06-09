@@ -64,6 +64,11 @@ const testimonials: Testimonial[] = [
     badge: "Client Rating",
     quote: "Fast and accurate.",
   },
+  {
+    id: "Client",
+    badge: "Client Rating",
+    quote: "I've done my protection remedy and many other remedies from Pooja and the results were great. 5 stars for her!",
+  },
 ];
 
 const row1 = [...testimonials, ...testimonials];
