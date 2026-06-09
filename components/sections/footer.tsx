@@ -12,7 +12,7 @@ export default function Footer() {
         <div>
           <div className="font-cinzel text-2xl font-bold text-white mb-3 tracking-[0.2em]">TAROT</div>
           <p className="text-rose-200/80 text-sm leading-relaxed mb-5">
-            Professional astrological services by Tarot Pooja Chauhan — guiding seekers since 2004.
+            Professional astrological services by Tarot Pooja Chauhaan — guiding seekers since 2004.
           </p>
           <div className="space-y-3">
             <a href="tel:+919834946893" style={{ whiteSpace: "nowrap", fontFamily: "'Arial', sans-serif", fontVariantNumeric: "lining-nums tabular-nums" }} className="block text-white text-base font-semibold hover:text-rose-200 transition-colors">
@@ -65,7 +65,7 @@ export default function Footer() {
 
       <div className="relative border-t border-white/10 py-5 text-center">
         <p className="text-xs text-purple-300/60 tracking-widest">
-          ✦ &nbsp; © {new Date().getFullYear()} Tarot Pooja Chauhan · All Rights Reserved &nbsp; ✦
+          ✦ &nbsp; © {new Date().getFullYear()} Tarot Pooja Chauhaan · All Rights Reserved &nbsp; ✦
         </p>
       </div>
     </footer>

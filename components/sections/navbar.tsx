@@ -25,7 +25,7 @@ export default function Navbar() {
             <div className="bg-white h-24 w-24 overflow-hidden flex-shrink-0">
               <img
                 src="/logo.png"
-                alt="Tarot Pooja Chauhan"
+                alt="Tarot Pooja Chauhaan"
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
             </div>

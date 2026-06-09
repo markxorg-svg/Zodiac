@@ -40,14 +40,14 @@ export default function Intro() {
             <div className="relative w-72 md:w-80 rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-purple-200/60 h-full min-h-[480px]">
               <Image
                 src="/pooja.jpg"
-                alt="Tarot Pooja Chauhan"
+                alt="Tarot Pooja Chauhaan"
                 fill
                 className="object-cover object-top"
                 priority
               />
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
-                <p className="font-cinzel text-white text-center text-sm tracking-[0.2em] uppercase drop-shadow">Tarot Pooja Chauhan</p>
+                <p className="font-cinzel text-white text-center text-sm tracking-[0.2em] uppercase drop-shadow">Tarot Pooja Chauhaan</p>
               </div>
             </div>
 

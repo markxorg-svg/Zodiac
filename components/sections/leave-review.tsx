@@ -16,7 +16,7 @@ export default function LeaveReview() {
     if (!rating || !name.trim() || !review.trim()) return;
 
     const text = encodeURIComponent(
-      `✨ New Review for Tarot Pooja Chauhan ✨\n\n` +
+      `✨ New Review for Tarot Pooja Chauhaan ✨\n\n` +
       `${"⭐".repeat(rating)} (${rating}/5)\n\n` +
       `👤 Name: ${name}\n\n` +
       `💬 Review:\n"${review}"\n\n` +

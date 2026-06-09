@@ -68,7 +68,7 @@ export default function PulseCTA() {
           Ready for a Reading?
         </h2>
         <p className="text-purple-200 max-w-md">
-          Book a personal session with Pooja Chauhan and receive guidance that is truly yours.
+          Book a personal session with Pooja Chauhaan and receive guidance that is truly yours.
         </p>
         <a
           href="https://wa.me/919834946893?text=Hi%20Pooja%20ji%2C%20I%27d%20like%20to%20book%20an%20appointment!"
