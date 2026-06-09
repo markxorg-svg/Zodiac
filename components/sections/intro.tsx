@@ -48,7 +48,6 @@ export default function Intro() {
               <div className="absolute inset-0 bg-gradient-to-t from-purple-900/40 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-5">
                 <p className="font-cinzel text-white text-center text-sm tracking-[0.2em] uppercase drop-shadow">Tarot Pooja Chauhan</p>
-                <p className="text-purple-200/80 text-center text-[11px] tracking-widest mt-1 drop-shadow">Est. 2004</p>
               </div>
             </div>
 
