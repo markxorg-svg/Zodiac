@@ -21,11 +21,11 @@ export default function Navbar() {
           : "bg-gradient-to-b from-black/40 via-black/10 to-transparent"
       }`}>
         <div className="max-w-7xl mx-auto flex items-center justify-between h-24">
-          <Link href="/">
+          <Link href="/" className="self-start">
             <img
               src="/logo.png"
               alt="Tarot Pooja Chauhaan"
-              className="h-24 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              className="h-32 w-auto object-contain hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
