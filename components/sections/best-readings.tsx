@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function BestReadings() {
   return (
@@ -38,6 +39,22 @@ export default function BestReadings() {
           <p className="text-purple-800/70 text-base md:text-lg leading-relaxed">
             Stay open-minded and allow the psychic to guide the session. Feel free to ask for clarification when needed. Remain positive and trust the process. Remember, guidance reveals possibilities and paths, but your free will always determines the choices you make.
           </p>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.9, delay: 0.2 }}
+          className="mt-14 relative w-full rounded-3xl overflow-hidden shadow-2xl shadow-purple-200/40 ring-1 ring-purple-200/30"
+        >
+          <Image
+            src="/tarot-cards.jpg"
+            alt="Tarot cards laid out on a pink surface"
+            width={1200}
+            height={675}
+            className="w-full h-auto object-cover"
+          />
         </motion.div>
       </div>
     </section>
