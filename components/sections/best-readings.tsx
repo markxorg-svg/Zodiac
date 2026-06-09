@@ -46,15 +46,18 @@ export default function BestReadings() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.9, delay: 0.2 }}
-          className="mt-14 relative w-full rounded-3xl overflow-hidden shadow-2xl shadow-purple-200/40 ring-1 ring-purple-200/30"
+          className="mt-14 relative w-full rounded-3xl overflow-hidden shadow-2xl shadow-rose-200/50 ring-1 ring-purple-100/60"
+          style={{ aspectRatio: "16/9" }}
         >
           <Image
             src="/tarot-cards.jpg"
             alt="Tarot cards laid out on a pink surface"
-            width={1200}
-            height={675}
-            className="w-full h-auto object-cover"
+            fill
+            className="object-cover object-center"
+            sizes="(max-width: 768px) 100vw, 768px"
           />
+          {/* subtle vignette to blend edges */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FDE8E8]/30 via-transparent to-[#FFF8F5]/10 pointer-events-none" />
         </motion.div>
       </div>
     </section>
