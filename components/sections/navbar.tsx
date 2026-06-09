@@ -25,7 +25,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="Tarot Pooja Chauhaan"
-              className="h-32 w-auto object-contain hover:scale-105 transition-transform duration-300"
+              className="h-20 w-auto object-contain hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
