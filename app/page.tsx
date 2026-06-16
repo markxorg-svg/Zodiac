@@ -9,38 +9,38 @@ import Crystals from "@/components/sections/crystals";
 import Footer from "@/components/sections/footer";
 import WhatsAppButton from "@/components/ui/whatsapp-button";
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Tarot Pooja Chauhaan",
+  "alternateName": "Pooja Chauhaan",
+  "description": "Tarot Reader, Psychic, Clairvoyant, Crystal Healer & Numerologist with 20+ years of experience. Personal readings available worldwide via WhatsApp.",
+  "url": "https://zodiac-delta-henna.vercel.app",
+  "telephone": "+919834946893",
+  "email": "pooja.s.chauhaan@gmail.com",
+  "founder": { "@type": "Person", "name": "Pooja Chauhaan" },
+  "serviceType": ["Tarot Reading", "Numerology", "Crystal Healing", "Psychic Reading", "Spell Work"],
+  "areaServed": "Worldwide",
+  "availableLanguage": ["English", "Hindi"],
+  "sameAs": ["https://wa.me/919834946893"],
+};
+
 export default function Home() {
   return (
-    <main className="flex flex-col min-h-screen bg-[#FFF8F5]">
-      {/* Navigation */}
-      <Navbar />
-
-      {/* 1. Hero */}
-      <Hero />
-
-      {/* 2. Intro — Know Me Better Pooja */}
-      <Intro />
-
-      {/* 3. Consult Banner */}
-      <ConsultBanner />
-
-      {/* 4. Services */}
-      <FeaturesCards />
-
-      {/* 5. How to Get the Best Reading */}
-      <BestReadings />
-
-      {/* 6. My Happy Client Reviews */}
-      <TestimonialsSection />
-
-      {/* 7. Crystals */}
-      <Crystals />
-
-      {/* 8. Contact / Footer */}
-      <Footer />
-
-      {/* Floating WhatsApp */}
-      <WhatsAppButton />
-    </main>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <main className="flex flex-col min-h-screen bg-[#FFF8F5]">
+        <Navbar />
+        <Hero />
+        <Intro />
+        <ConsultBanner />
+        <FeaturesCards />
+        <BestReadings />
+        <TestimonialsSection />
+        <Crystals />
+        <Footer />
+        <WhatsAppButton />
+      </main>
+    </>
   );
 }
